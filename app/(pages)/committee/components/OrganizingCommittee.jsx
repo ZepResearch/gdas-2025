@@ -172,7 +172,7 @@ If you are passionate about advancing higher education, TVET, and workforce deve
 function CommitteeMemberCard({ member }) {
   // Default image if member.img is not available
   const imageUrl = member.img
-    ? `http://gdas-pocketbase-289683-194-164-149-251.traefik.me/api/files/GDAS_committee/${member.id}/${member.img}`
+    ? `https://test.zepresearch.com/api/files/GDAS_committee/${member.id}/${member.img}`
     : "/placeholder.svg?height=300&width=300"
 
   return (
