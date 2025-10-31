@@ -119,9 +119,7 @@ export default function EventLanding() {
         {/* Left content */}
         <motion.div className="flex-1 max-w-2xl w-full" variants={containerVariants} initial="hidden" animate="visible">
           {/* Event tag */}
-          <motion.div variants={itemVariants} className="mb-4 sm:mb-6 lg:mb-8">
-            <span className="text-white text-xs sm:text-sm md:text-base font-semibold tracking-wide">#Event for Startups</span>
-          </motion.div>
+         
 
           {/* Main heading */}
           <motion.h1

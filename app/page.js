@@ -4,7 +4,7 @@ import HeroSection from "@/components/hero-section"
 import PhotoGallerySection from "@/components/photo-gallery-section"
 import PricingSection from "@/components/pricing-section"
 import SpeakerAnnouncement from "@/components/Cta-register"
-import SponsorsSection from "@/components/sponsors-section"
+import SponsorsSection from "@/components/Co-organizer"
 import TimelineSection from "@/components/Timeline"
 import SpeakerSection from "@/components/Speaker"
 

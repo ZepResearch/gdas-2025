@@ -133,7 +133,6 @@ export default function SponsorsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-blue-500 font-bold text-sm">#Who helps us to create</p>
           <h2 className="text-4xl md:text-6xl font-medium   leading-tight text-gray-900 text-balance">Our Co-Organizer</h2>
         </motion.div>
 

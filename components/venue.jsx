@@ -8,7 +8,6 @@ export default function DirectionSection() {
     <section className="w-full py-16 px-4 md:px-8 lg:px-16">
       {/* Header Section */}
       <div className="max-w-screen-2xl mx-auto mb-12 text-center">
-        <p className="text-blue-500 font-bold text-sm">#Get in there to reach</p>
         <h1 className="text-4xl md:text-6xl font-medium   leading-tight text-black mb-2 leading-tight">
           Get direction to the event hall
         </h1>

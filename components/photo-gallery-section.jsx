@@ -42,11 +42,9 @@ export default function PhotoGallerySection() {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Left Content Section */}
           <div className="flex-shrink-0 w-full lg:w-auto">
-            <div className="rounded-3xl p-8 lg:p-12 max-w-sm">
+            <div className="rounded-3xl p-8 lg:p-12 max-w-sm  shadow-lg  backdrop-blur-sm">
               {/* blue hashtag label */}
-              <div className="mb-4">
-                <span className="text-blue-500 font-bold text-sm">#Photo gallery</span>
-              </div>
+            
 
               {/* Main heading */}
               <h2 className="text-4xl md:text-6xl font-medium text-black">It was an amazing crowd</h2>

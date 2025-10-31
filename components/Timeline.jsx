@@ -110,7 +110,6 @@ export default function TimelineSection() {
         {/* Header Section */}
         <div className="mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-blue-500 font-bold text-sm">#Conference Timeline</span>
           </div>
 
           <div className="text-center mb-8">

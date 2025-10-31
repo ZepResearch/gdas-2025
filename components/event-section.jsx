@@ -85,15 +85,7 @@ export default function EventSection() {
               transition={{ duration: 0.3 }}
             >
               {/* Blue Accent Text */}
-              <motion.div 
-                className="flex items-center gap-2 mb-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                <span className="text-blue-500 font-bold text-sm">#At a Flash Representation</span>
-              </motion.div>
+          
 
               {/* Main Heading */}
               <motion.h1 
@@ -103,7 +95,7 @@ export default function EventSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                Get the latest info about Evenex
+                Get the latest info about GDAS
               </motion.h1>
 
               {/* Decorative Checkmark */}
@@ -133,15 +125,12 @@ export default function EventSection() {
                 className="text-gray-700 text-base leading-relaxed"
                 variants={fadeInUp}
               >
-                We have dedicated tracks for every industry Whether you want to hire tech's top talent meet with the
-                policymakers influencing.
-              </motion.p>
+Stay informed with the latest updates, insights, and announcements from the Global Defence & Aviation Skills Leadership Summit (GDAS 2025)              </motion.p>
               <motion.p 
                 className="text-gray-700 text-base leading-relaxed"
                 variants={fadeInUp}
               >
-                Me have dedicated tracks for every industry Whether you want to hire tech's top talent meet with the
-                policymakers influencing your industry or exchange notes with your peers and competitors we have.
+               the leading global forum advancing collaboration between defence, aviation, and education sectors. From keynote highlights to new partnership opportunities, GDAS 2025 keeps you connected to what’s shaping the future of global security and aerospace innovation.
               </motion.p>
             </div>
 

@@ -211,7 +211,6 @@ export default function SpeakerSection() {
       
       <div className="max-w-7xl mx-auto px-4 ">
         <div className="text-center mb-20">
-          <span className="text-sm font-medium text-blue-700 tracking-wider uppercase">#Featured Speakers</span>
 
           <h2 className="text-4xl md:text-6xl font-medium text-gray-900 mb-6 leading-tight">
             Distinguished Speakers
