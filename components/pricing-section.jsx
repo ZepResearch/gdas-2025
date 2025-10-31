@@ -151,7 +151,7 @@ export default function ConferenceTicketPage() {
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
                 <p className="font-semibold text-slate-900">Dates</p>
-                <p className="text-slate-600">June 15-17, 2025</p>
+                <p className="text-slate-600">December 8th - 9th, 2025</p>
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Location</p>

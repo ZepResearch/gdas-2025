@@ -95,7 +95,7 @@ export default function EventSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                Get the latest info about GDAS
+                Get the latest info about GDAS 2025
               </motion.h1>
 
               {/* Decorative Checkmark */}

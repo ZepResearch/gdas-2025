@@ -67,7 +67,7 @@ export default function DirectionSection() {
           {/* Right - Map */}
           <div className="rounded-2xl overflow-hidden shadow-lg h-80">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e5f5f5f5%3A0x1234567890abcdef!2s1356%20Broadway%2C%20New%20York%2C%20NY%2010018!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0557433944346!2d101.59396217497093!3d3.0797943968958807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c672220b503%3A0xe620547645d4c671!2sDorsett%20Grand%20Subang!5e0!3m2!1sen!2sin!4v1761816230426!5m2!1sen!2sin"       
               width="100%"
               height="100%"
               style={{ border: 0 }}
