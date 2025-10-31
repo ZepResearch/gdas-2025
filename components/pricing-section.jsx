@@ -4,17 +4,17 @@ import { Check } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function ConferenceTicketPage() {
-  const tickets = [
+const tickets = [
     {
-      name: "Early Bird",
-      price: "$299",
-      description: "Limited availability",
-      features: ["2-day summit access", "Welcome kit", " All meals included", "Networking sessions", "Certificate of attendance"],
-      highlighted: true,
+      name: "Students",
+      price: "$199",
+      description: "Student discount rate",
+      features: ["2-day summit access", "Welcome kit", "All meals included", "Networking sessions", "Certificate of attendance"],
+      highlighted: false,
     },
     {
-      name: "Basic",
-      price: "$499",
+      name: "Academicians",
+      price: "$299",
       description: "Most popular",
       features: [
         "2-day summit access",
@@ -24,12 +24,12 @@ export default function ConferenceTicketPage() {
         "Digital materials",
         "Certificate of attendance",
       ],
-      highlighted:false ,
+      highlighted: true,
     },
     {
-      name: "Premium",
-      price: "$799",
-      description: "VIP experience",
+      name: "Industrialist",
+      price: "$399",
+      description: "Industry professionals",
       features: [
         "2-day summit access",
         "Welcome kit",

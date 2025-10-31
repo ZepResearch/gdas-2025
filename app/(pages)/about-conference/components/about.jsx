@@ -183,43 +183,74 @@ export default function About_aboutsection() {
 </section>
 
       {/* Conference Highlights Section */}
+   {/* Key Highlights Section */}
       <section className="relative z-10 py-20 bg-white/50">
         <div className="max-w-screen-2xl mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-medium   leading-tight text-gray-900 text-center mb-16 ">Conference Highlights</h2>
+          <h2 className="text-4xl md:text-6xl font-medium leading-tight text-gray-900 text-center mb-16">Key Highlights</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-              <div className="text-center">
-                <div className="text-4xl md:text-6xl font-medium   leading-tight text-blue-500 mb-2">30+</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Expert Speakers</h3>
-                <p className="text-sm text-gray-600">Industry leaders and researchers</p>
+              <div className="flex items-start gap-4">
+               
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">First in Malaysia</h3>
+                  <p className="text-sm text-gray-600">The first Public and Defence Aviation Skills Conference in Malaysia</p>
+                </div>
               </div>
             </Card>
+            
             <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-              <div className="text-center">
-                <div className="text-4xl md:text-6xl font-medium   leading-tight text-blue-500 mb-2">15+</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Tech Demos</h3>
-                <p className="text-sm text-gray-600">Live robotics demonstrations</p>
+              <div className="flex items-start gap-4">
+               
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Supporting TVET</h3>
+                  <p className="text-sm text-gray-600">Supporting Malaysia's TVET policy through the aviation sector</p>
+                </div>
               </div>
             </Card>
+
             <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-              <div className="text-center">
-                <div className="text-4xl md:text-6xl font-medium   leading-tight text-blue-500 mb-2">500+</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Attendees</h3>
-                <p className="text-sm text-gray-600">Global participants</p>
+              <div className="flex items-start gap-4">
+               
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">UN Recognition</h3>
+                  <p className="text-sm text-gray-600">In conjunction with the United Nations International Civil Aviation Day, celebrated annually on December 7</p>
+                </div>
               </div>
             </Card>
+
             <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-              <div className="text-center">
-                <div className="text-4xl md:text-6xl font-medium   leading-tight text-blue-500 mb-2">2</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Days</h3>
-                <p className="text-sm text-gray-600">Intensive learning experience</p>
+              <div className="flex items-start gap-4">
+               
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Three Tracks</h3>
+                  <p className="text-sm text-gray-600">Featuring three tracks: Defence, Industry, and Training</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+              <div className="flex items-start gap-4">
+               
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Expert Speakers</h3>
+                  <p className="text-sm text-gray-600">Guest speakers from the defence and aviation sectors</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+              <div className="flex items-start gap-4">
+               
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Networking & Exhibition</h3>
+                  <p className="text-sm text-gray-600">Exhibition booths from aviation industries and institutes with business networking sessions</p>
+                </div>
               </div>
             </Card>
           </div>
         </div>
       </section>
-
       {/* Why Attend Section */}
      
 <section className="relative z-10 py-20 bg-white/50">

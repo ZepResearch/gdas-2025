@@ -35,12 +35,12 @@ export default function Navbar() {
     ],
   },
   { title: "COMMITTEE", href: "/committee" },
-  { title: "SUBMISSION", href: "/submission" },
+  { title: "SUBMISSION", href: "" },
  
   { title: "VENUE", href: "/venue" },
   { title: "AWARDS", href: "/awards" },
-  { title: "CONTACT", href: "/contact" },
-  { title: "EXHIBIT & SPONSOR", href: "/exhibit-and-sponsor" },
+  { title: "CONTACT", href: "" },
+  { title: "EXHIBIT & SPONSOR", href: "" },
 ]
   return (
     <>

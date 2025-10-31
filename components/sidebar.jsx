@@ -36,7 +36,7 @@ export default function Sidebar({ isOpen, onClose }) {
         <div className="flex items-center gap-2 mb-6 sm:mb-8 mt-2 sm:mt-4">
           <Link href="/" className="flex items-center gap-1 sm:gap-2">
                 <Image
-                  src="/logo.jpg"
+                  src="/logoX.jpg"
                   alt="Evenex Logo"
                   width={320}
                   height={320}
@@ -49,44 +49,41 @@ export default function Sidebar({ isOpen, onClose }) {
         {/* Content */}
         <div className="flex-1 overflow-y-auto pr-2">
           <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
-            We must explain to you how all seds this mistakens idea off denouncing pleasures and praising pain was born.
-          </p>
+the leading global forum advancing collaboration between defence, aviation, and education sectors. From keynote highlights to new partnership opportunities, GDAS 2025 keeps you connected to what’s shaping the future of global security and aerospace innovation.        
+  </p>
 
-          <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">
-            I will give you a completed accounts we must explain to you how all seds this mistakes idea off denouncing
-            pleasures and praising pain was born and I will give you a completed accounts.
-          </p>
+      
         </div>
 
         {/* Social Media Icons */}
         <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 pt-4 sm:pt-6 border-t border-gray-200 flex-wrap">
           <Link
             href="#"
-            className="p-2 sm:p-3 bg-gray-100 hover:bg-red-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+            className="p-2 sm:p-3 bg-gray-100 hover:bg-blue-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
           >
             <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
           <Link
             href="#"
-            className="p-2 sm:p-3 bg-gray-100 hover:bg-red-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+            className="p-2 sm:p-3 bg-gray-100 hover:bg-blue-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
           >
             <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
           <Link
             href="#"
-            className="p-2 sm:p-3 bg-gray-100 hover:bg-red-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+            className="p-2 sm:p-3 bg-gray-100 hover:bg-blue-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
           >
             <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
           <Link
             href="#"
-            className="p-2 sm:p-3 bg-gray-100 hover:bg-red-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+            className="p-2 sm:p-3 bg-gray-100 hover:bg-blue-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
           >
             <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
           <Link
             href="#"
-            className="p-2 sm:p-3 bg-gray-100 hover:bg-red-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
+            className="p-2 sm:p-3 bg-gray-100 hover:bg-blue-500 text-gray-700 hover:text-white rounded-lg transition-all duration-300 transform hover:scale-110"
           >
             <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>

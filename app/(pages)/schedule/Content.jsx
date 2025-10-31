@@ -8,37 +8,25 @@ import { cn } from "@/lib/utils"
 
 const scheduleData = [
   {
-    date: "December 8 | Day 1",
+    date: "08 Dec 2025 (Mon)",
     items: [
-      { time: "7:30AM - 8:30AM", title: "Registration & Welcome Coffee" },
-      { time: "8:30AM - 9:00AM", title: "Opening Ceremony & National Anthems" },
-      { time: "9:00AM - 9:45AM", title: "Ministerial Opening Address: Future of Defence & Aviation Education" },
-      { time: "9:45AM - 10:30AM", title: "Keynote: Building World-Class Military & Aviation Experts Through TVET" },
-      { time: "10:30AM - 11:00AM", title: "Networking Break" },
-      { time: "11:00AM - 01:00PM", title: "Session 1: Higher Education & TVET Integration for Defence Technologies" },
-      { time: "01:00PM - 02:15PM", title: "Executive Luncheon" },
-      { time: "02:15PM - 03:00PM", title: "Keynote: Advanced Aerospace Training Systems & Digital Transformation" },
-      { time: "03:00PM - 05:00PM", title: "Session 2: Cross-Border Cooperation in Aviation Skills Development" },
-      { time: "05:00PM - 05:30PM", title: "Day 1 Closing Remarks" },
-      { time: "06:30PM - 09:00PM", title: "Gala Dinner & Networking Reception" },
+      { time: "12 tgh – 5 petang", title: "Networking hitea & early registration" },
     ],
   },
   {
-    date: "December 9 | Day 2",
+    date: "09 Dec 2025 (Tues)",
     items: [
-      { time: "8:00AM - 8:30AM", title: "Registration & Morning Coffee" },
-      { time: "8:30AM - 9:00AM", title: "Day 2 Welcome & Recap" },
-      { time: "9:00AM - 9:45AM", title: "Keynote: Industry 4.0 & Security Transformations in Defence Education" },
-      { time: "9:45AM - 10:15AM", title: "Coffee Break & Networking" },
-      { time: "10:15AM - 12:30PM", title: "Session 3: Policy Frameworks for Advanced Skills Training in Aviation & Defence" },
-      { time: "12:30PM - 01:45PM", title: "Leadership Luncheon" },
-      { time: "01:45PM - 03:30PM", title: "High-Level Panel: Government-Academia-Industry Ecosystem for Defence Excellence" },
-      { time: "03:30PM - 04:00PM", title: "Refreshment Break" },
-      { time: "04:00PM - 05:00PM", title: "Summit Declaration & Closing Ceremony" },
-      { time: "05:00PM - 06:30PM", title: "Farewell Reception & Strategic Networking" },
+      { time: "8 am – 9 am", title: "Registration & breakfast" },
+      { time: "9 am – 11 am", title: "Session 1: Defence" },
+      { time: "11 am – 11.30 am", title: "Tea break" },
+      { time: "11.30 am – 1.30 pm", title: "Session 2: Industry" },
+      { time: "1.30 pm – 2.30 pm", title: "Lunch" },
+      { time: "2.30 pm – 5 pm", title: "Session 3: Training" },
+      { time: "5 pm – 6 pm", title: "Networking Tea & dismiss" },
     ],
   },
-]
+];
+
 
 export default function ConferenceSchedule() {
   const startDate = new Date(2025, 11, 8) // December 8, 2025
