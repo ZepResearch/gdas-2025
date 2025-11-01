@@ -17,7 +17,7 @@ export default function VenuePage() {
     <div className="max-w-4xl mx-auto text-center mb-16">
       <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 mb-6 ">Conference Venue</h2>
       <p className="text-lg text-gray-600 leading-relaxed">
-        The <strong>Global Defence & Aviation Skills Leadership Summit (GDAS 2025)</strong> will take place at the prestigious <strong>Dorsett Grand Subang</strong> in Selangor, Malaysia. 
+        The <strong>Global Defence and Aviation Skills Conference 2025  (GDAS 2025)</strong> will take place at the prestigious <strong>Dorsett Grand Subang</strong> in Selangor, Malaysia. 
         This elegant venue provides a sophisticated setting equipped with modern facilities, ideal for high-level discussions and international collaboration in defence, aviation, and higher education sectors.
       </p>
     </div>

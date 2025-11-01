@@ -80,7 +80,7 @@ export default function ThemeAndTopicsPage() {
                 Building World-Class Experts for Defence & Aviation Industries of the Future
               </h2>
               <p className="text-gray-600 mb-4">
-                The GLOBAL DEFENCE & AVIATION SKILLS LEADERSHIP SUMMIT 2025 (GDAS 2025) is the strategic hub for 
+                The Global Defence and Aviation Skills Conference 2025 (GDAS 2025) is the strategic hub for 
                 technical, vocational, and higher education excellence in aviation, aerospace, and defence technologies.
               </p>
               <p className="text-gray-600 mb-4">

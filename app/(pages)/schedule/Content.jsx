@@ -39,9 +39,7 @@ export default function ConferenceSchedule() {
         <div className="space-y-8">
           <div className="text-center space-y-4 mb-12">
             <h1 className="text-4xl md:text-5xl font-medium text-gray-900 leading-tight">
-              Global Defence & Aviation Skills Leadership Summit
-             
-              2025
+           Global Defence and Aviation Skills Conference 2025 
             </h1>
             <p className="text-blue-600 text-xl font-semibold max-w-3xl mx-auto mt-4">
               Empowering the Future: Advancing Higher Education TVET for World-Class Military and Aviation Experts

@@ -60,7 +60,7 @@ export default function About_aboutsection() {
 </h1>
 
 <p className="mt-6 text-base leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-  The <strong>Global Defence & Aviation Skills Leadership Summit (GDAS 2025)</strong> is an international platform dedicated to shaping the future of defence, aviation, and aerospace education. 
+  The <strong>Global Defence and Aviation Skills Conference 2025  (GDAS 2025)</strong> is an international platform dedicated to shaping the future of defence, aviation, and aerospace education. 
   Bringing together government leaders, defence institutions, university chancellors, TVET councils, and industry pioneers from across Europe and Asia, GDAS 2025 aims to redefine how knowledge and skills are transferred in the rapidly evolving global security and aviation landscape.
 </p>
 

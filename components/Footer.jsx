@@ -176,7 +176,7 @@ export default function ConferenceFooter() {
           </Link>
             </div>
             <p className="text-white/80 mb-6 max-w-xl">
-            The Global Defence & Aviation Skills Leadership Summit (GDAS 2025) positions Malaysia as the strategic hub for technical, vocational, and higher education excellence in the fields of aviation, aerospace, and defence technologies.
+            The Global Defence and Aviation Skills Conference 2025  (GDAS 2025) positions Malaysia as the strategic hub for technical, vocational, and higher education excellence in the fields of aviation, aerospace, and defence technologies.
 
             </p>
             <div className="flex space-x-4">

@@ -143,7 +143,7 @@ const tickets = [
         >
           <div className="bg-slate-50 rounded-xl p-8 max-w-2xl mx-auto">
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Global Defence & Aviation Skills Leadership Summit 2025
+             Global Defence and Aviation Skills Conference 2025 
             </h3>
             <p className="text-slate-600 mb-6">
               Empowering the Future: Advancing Higher Education TVET for World-Class Military and Aviation Experts

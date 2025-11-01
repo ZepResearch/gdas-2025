@@ -115,7 +115,7 @@ export default function CommitteePage() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">Interested in Joining Our Committee?</h2>
               <p className="text-xl mb-8 opacity-90">
-              We’re inviting visionary leaders and distinguished experts to join us in shaping the success of the Global Defence & Aviation Skills Leadership Summit 2025 (GDAS 2025).
+              We’re inviting visionary leaders and distinguished experts to join us in shaping the success of the Global Defence and Aviation Skills Conference 2025 (GDAS 2025).
 If you are passionate about advancing higher education, TVET, and workforce development in defence, aviation, and aerospace — and wish to contribute to building a world-class ecosystem of future-ready professionals — we would be honored to hear from you.
               </p>
 

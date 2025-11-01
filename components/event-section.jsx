@@ -125,7 +125,7 @@ export default function EventSection() {
                 className="text-gray-700 text-base leading-relaxed"
                 variants={fadeInUp}
               >
-Stay informed with the latest updates, insights, and announcements from the Global Defence & Aviation Skills Leadership Summit (GDAS 2025)              </motion.p>
+Stay informed with the latest updates, insights, and announcements from the Global Defence and Aviation Skills Conference 2025  (GDAS 2025)              </motion.p>
               <motion.p 
                 className="text-gray-700 text-base leading-relaxed"
                 variants={fadeInUp}

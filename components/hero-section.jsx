@@ -117,7 +117,7 @@ export default function EventLanding() {
       {/* Main content */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between min-h-full px-4 sm:px-8 md:px-16 lg:px-24 max-w-screen-2xl mx-auto  pt-12">
         {/* Left content */}
-        <motion.div className="flex-1 max-w-2xl w-full" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="flex-1  w-full" variants={containerVariants} initial="hidden" animate="visible">
           {/* Event tag */}
          
 
@@ -126,11 +126,11 @@ export default function EventLanding() {
             variants={itemVariants}
             className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-medium text-white mb-2 sm:mb-4 text-balance"
           >
-            GLOBAL DEFENCE & AVIATION SKILLS LEADERSHIP SUMMIT 2025 
+            Global Defence and Aviation Skills Conference 2025 
           </motion.h1>
 
           {/* Event details */}
-          <p className="text-2xl text-white"> • December 8th - 9th, 2025 </p>
+          <p className="text-2xl text-white">• December 8th - 9th, 2025 </p>
           <p className="text-2xl text-white">• Kuala Lumpur, Malaysia</p>
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col mt-4 sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center w-full sm:w-auto">
@@ -152,6 +152,35 @@ export default function EventLanding() {
               Add to Calendar
             </motion.button>
           </motion.div>
+
+ <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-md backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-12 ">
+              {/* <img
+                src="/assets/scopus.png"
+                alt=""
+                className="h-16 drop-shadow-lg"
+              />
+              <img
+                src="/assets/clarivate.png"
+                alt=""
+                className="h-16 drop-shadow-lg"
+              /> */}
+              {/* <img
+                src="assets/cpd.png"
+                alt=""
+                className="h-32 drop-shadow-lg"
+              />  */}
+              <img
+                src="assets/zepresearch.png"
+                alt=""
+                className="h-16 drop-shadow-lg"
+              />
+              <img
+                src="assets/dsak-logo.jpg"
+                alt=""
+                className="h-24 drop-shadow-lg"
+              />
+            </div>
+
         </motion.div>
 
         {/* Right content - Microphone */}

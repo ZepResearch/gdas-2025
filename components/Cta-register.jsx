@@ -63,7 +63,7 @@ export default function SpeakerAnnouncement() {
 
             {/* Body text */}
             <p className="text-sm md:text-base text-gray-100 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              The Global Defence & Aviation Skills Leadership Summit (GDAS 2025) positions Malaysia as the strategic hub for technical, vocational, and higher education excellence in the fields of aviation, aerospace, and defence technologies.
+             Global Defence and Aviation Skills Conference 2025  (GDAS 2025) positions Malaysia as the strategic hub for technical, vocational, and higher education excellence in the fields of aviation, aerospace, and defence technologies.
 
             </p>
 
