@@ -54,7 +54,7 @@ export default function AboutSection() {
               {/* <h3 className="text-2xl lg:text-3xl font-bold text-blue-900 mb-4 text-center font-serif">Zep Research</h3> */}
               
               <p className="text-gray-600 leading-relaxed mb-6">
-                Zep Research is a premier research organization dedicated to advance scientific knowledge and
+                ZEP RESEARCH OPC PRIVATE LIMITED is a premier research organization dedicated to advance scientific knowledge and
                 technological innovation. Since our founding, we have been at the forefront of organizing world-class
                 conferences, symposiums, and research initiatives that bring together the brightest minds from academia
                 and industry.

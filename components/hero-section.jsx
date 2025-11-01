@@ -160,8 +160,7 @@ export default function EventLanding() {
             </Link>
           
           </motion.div>
-
- <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-5xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-12 ">
+ <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-5xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-2 ">
               <img
                 src="/assets/scopus.png"
                 alt=""
@@ -188,6 +187,8 @@ export default function EventLanding() {
                 className="h-24 drop-shadow-lg"
               />
             </div>
+          <h1  className="text-white text-xl">organized by :</h1>
+<h1 className="text-white text-4xl font-bold"> ZEP RESEARCH OPC PRIVATE LIMITED </h1>
 
         </motion.div>
 
