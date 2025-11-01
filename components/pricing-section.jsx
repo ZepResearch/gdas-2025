@@ -48,7 +48,7 @@ const tickets = [
     <section className="min-h-full w-full relative py-20 px-4 bg-cover bg-center bg-no-repeat " style={{ backgroundImage: "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80')" }}>
       {/* Blue overlay */}
       <div className="absolute inset-0 bg-blue-900 opacity-50"></div>
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative">
         {/* Header */}
         <motion.div
           className="text-center mb-16"

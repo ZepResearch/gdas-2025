@@ -68,7 +68,7 @@ export default function EventSection() {
       </motion.div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="relative  max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div 
@@ -167,7 +167,7 @@ Stay informed with the latest updates, insights, and announcements from the Glob
 
               {/* Stats Container */}
               <motion.div 
-                className="bg-white rounded-lg shadow-xl p-8 lg:p-10 flex items-center justify-between relative z-10"
+                className="bg-white rounded-lg shadow-xl p-8 lg:p-10 flex items-center justify-between relative "
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >

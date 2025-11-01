@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { Ticket } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
+import { ReserveButton } from "./reserve-button"
 
 export default function EventLanding() {
   const containerVariants = {
@@ -134,36 +136,42 @@ export default function EventLanding() {
           <p className="text-2xl text-white">• Kuala Lumpur, Malaysia</p>
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col mt-4 sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center w-full sm:w-auto">
+          <Link href="/register" >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors text-sm sm:text-base"
             >
               <Ticket size={20} />
-              Purchase Ticket
+             Register Now
             </motion.button>
-
+            
+            </Link>
+              <ReserveButton/>
+            <Link href="/about-conference" >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 border border-white hover:bg-white hover:text-blue-600 transition-colors text-sm sm:text-base"
             >
-              <Plus size={20} />
-              Add to Calendar
+              
+             Learn More
             </motion.button>
+            </Link>
+          
           </motion.div>
 
- <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-md backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-12 ">
-              {/* <img
+ <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-5xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-12 ">
+              <img
                 src="/assets/scopus.png"
                 alt=""
-                className="h-16 drop-shadow-lg"
+                className="h-10 drop-shadow-lg"
               />
               <img
                 src="/assets/clarivate.png"
                 alt=""
-                className="h-16 drop-shadow-lg"
-              /> */}
+                className="h-12 drop-shadow-lg"
+              />
               {/* <img
                 src="assets/cpd.png"
                 alt=""
@@ -172,7 +180,7 @@ export default function EventLanding() {
               <img
                 src="assets/zepresearch.png"
                 alt=""
-                className="h-16 drop-shadow-lg"
+                className="h-12 drop-shadow-lg"
               />
               <img
                 src="assets/dsak-logo.jpg"

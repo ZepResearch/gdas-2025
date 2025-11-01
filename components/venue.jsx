@@ -19,7 +19,7 @@ export default function DirectionSection() {
           {/* Left Card - Venue Info */}
           <div className="relative rounded-2xl overflow-hidden shadow-lg h-80">
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-90 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-90 " />
             <Image
               src="https://images.unsplash.com/photo-1521334726092-b509a19597c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1801"
               alt="Venue background"

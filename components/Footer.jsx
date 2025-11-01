@@ -162,7 +162,7 @@ export default function ConferenceFooter() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 relative z-10">
+      <div className="container mx-auto px-4 py-16 relative ">
         {/* Top Section with Logo/Description on left and Conference Cards on right */}
         <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 mb-16">
           {/* Left Side - Logo, Name, Description, Social Links */}

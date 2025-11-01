@@ -12,7 +12,7 @@ export default function SpeakerAnnouncement() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-800" />
       </div>
 
-      <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-center pt-8 md:pt-12 lg:pt-10">
+      <div className="relative  flex flex-col-reverse lg:flex-row items-center justify-center pt-8 md:pt-12 lg:pt-10">
         {/* Left side - Image with overlay text */}
         <div className="relative w-full lg:w-1/2 flex items-start justify-center  ">
           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
