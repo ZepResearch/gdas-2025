@@ -2,7 +2,7 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { Ticket } from "lucide-react"
+import { Calendar, MapPin, Star, Ticket, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { ReserveButton } from "./reserve-button"
@@ -77,7 +77,7 @@ export default function EventLanding() {
   }
 
   return (
-   <div className="relative overflow-hidden bg-gradient-to-r from-blue-500/80 to-blue-700/90 op">
+   <div className="relative overflow-hidden bg-gradient-to-r from-blue-500/80 to-blue-700/90 py-12">
       {/* Background images with slideshow effect */}
       {backgroundImages.map((image, index) => (
         <motion.div
@@ -155,8 +155,7 @@ export default function EventLanding() {
           </motion.h1>
 
           {/* Event details */}
-          <p className="text-2xl text-white">• December 8th - 9th, 2025 </p>
-          <p className="text-2xl text-white">• Selangor/ Kuala Lumpur, Malaysia</p>
+        
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col mt-4 sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center w-full sm:w-auto">
           <Link href="/registration" >
@@ -183,7 +182,17 @@ export default function EventLanding() {
             </Link>
           
           </motion.div>
- <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-center gap-3 px-3 max-w-7xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-2 ">
+ <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-center gap-3 px-3 max-w-3xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-8 ">
+                  <img
+                src="assets/dsak-logo.jpg"
+                alt=""
+                className="h-24 drop-shadow-lg"
+              />
+               <img
+                src="assets/zepresearch.png"
+                alt=""
+                className="h-10 drop-shadow-lg"
+              />
               <img
                 src="/assets/scopus.png"
                 alt=""
@@ -199,61 +208,74 @@ export default function EventLanding() {
                 alt=""
                 className="h-32 drop-shadow-lg"
               />  */}
-              <img
-                src="assets/zepresearch.png"
-                alt=""
-                className="h-10 drop-shadow-lg"
-              />
-              <img
-                src="assets/dsak-logo.jpg"
-                alt=""
-                className="h-24 drop-shadow-lg"
-              />
+             
+         
             </div>
 
 
         </motion.div>
 
         {/* Right content - Microphone */}
-        <motion.div
-          className="flex-1 flex items-center justify-center relative mt-8 lg:mt-0 w-full lg:w-auto"
-          variants={scaleVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Microphone image */}
-         <motion.div variants={rotateVariants} initial="hidden" animate="visible" className="relative z-10">
-            <Image
-              src="/assets/mic.png"
-              alt="Microphone"
-              width={500}
-              height={500}
-              className="md:w-[250px] w-[100px] opacity-90"
-              
-            />
-          </motion.div>
-
-          {/* Decorative triangle */}
-          <motion.div
-            className="absolute top-10 sm:top-20 right-5 sm:right-10 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-r-2 border-white opacity-60 hidden sm:block"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-          />
-
-          {/* Decorative wavy line */}
-          <motion.svg
-            className="absolute bottom-8 sm:bottom-12 right-10 sm:right-20 w-6 h-6 sm:w-8 sm:h-8 text-white opacity-40 hidden sm:block"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
+   <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="lg:w-[450px] w-full"
           >
-            <path d="M6 9c0 0 2-2 4-2s4 2 4 2" />
-            <path d="M14 9c0 0 2-2 4-2s4 2 4 2" />
-          </motion.svg>
-        </motion.div>
+            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl overflow-hidden">
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-6 text-white">Conference Details</h3>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                      <Calendar className="w-6 h-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <p className="text-slate-100 text-sm">Date</p>
+                      <p className="text-white text-lg font-medium">
+                        December  8<sup>th</sup> - 9<sup>th</sup>, 2025
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                      <MapPin className="w-6 h-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <p className="text-slate-100 text-sm">Location</p>
+                      <p className="text-white text-lg font-medium">Selangor/ Kuala Lumpur, Malaysia</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                      <Users className="w-6 h-6 text-blue-800" />
+                    </div>
+                    <div>
+                      <p className="text-slate-100 text-sm">Format</p>
+                      <p className="text-white text-lg font-medium">In-person</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-white/10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="flex">
+                        {[...Array(4)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-yellow-500 xt-blue-800" />
+                        ))}
+                      </div>
+                      <span className="ml-2 text-white">4.8 rating</span>
+                    </div>
+                    <span className="text-slate-100 text-sm">500+ attendees</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
       </div>
     </div>
   )

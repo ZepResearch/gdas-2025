@@ -201,12 +201,12 @@ export default function ConferenceFooter() {
               >
                 <Instagram size={18} />
               </a>
-              <a
+              {/* <a
                 href="https://x.com/Zepresearch"
                 className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
               >
                 <Twitter size={18} />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/zep-research/"
                 className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
