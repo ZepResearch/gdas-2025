@@ -59,12 +59,12 @@ export default function EventLanding() {
   }
 
   return (
-   <div className="relative overflow-hidden bg-gradient-to-r from-blue-500/90 to-blue-700/90">
+   <div className="relative overflow-hidden bg-gradient-to-r from-blue-500/80 to-blue-700/90 op">
       {/* Background image with low opacity */}
       <motion.div
-        className="absolute inset-0 w-full h-full  bg-cover bg-center grayscale-100"
+        className="absolute inset-0 w-full h-full  bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1617689348265-8be393053139?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1508530786855-dfea35260b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740')",
           backgroundBlendMode: "overlay"
         }}
         initial={{ opacity: 0 }}
@@ -74,7 +74,7 @@ export default function EventLanding() {
       
       {/* Background decorative elements */}
       <motion.div
-        className="absolute top-0 left-0 w-full h-full opacity-20"
+        className="absolute top-0 left-0 w-full h-full "
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.2 }}
         transition={{ duration: 1 }}
@@ -133,10 +133,10 @@ export default function EventLanding() {
 
           {/* Event details */}
           <p className="text-2xl text-white">• December 8th - 9th, 2025 </p>
-          <p className="text-2xl text-white">• Kuala Lumpur, Malaysia</p>
+          <p className="text-2xl text-white">• Selangor/ Kuala Lumpur, Malaysia</p>
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col mt-4 sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center w-full sm:w-auto">
-          <Link href="/register" >
+          <Link href="/registration" >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -187,8 +187,7 @@ export default function EventLanding() {
                 className="h-24 drop-shadow-lg"
               />
             </div>
-          <h1  className="text-white text-xl">organized by :</h1>
-<h1 className="text-white text-4xl font-bold"> ZEP RESEARCH OPC PRIVATE LIMITED </h1>
+
 
         </motion.div>
 

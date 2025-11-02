@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <EventSection/>
-      <SponsorsSection/>
+      {/* <SponsorsSection/> */}
       <TimelineSection/>
     <SpeakerSection/>
     

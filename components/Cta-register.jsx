@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Ticket } from "lucide-react"
+import Link from "next/link"
 
 export default function SpeakerAnnouncement() {
   return (
@@ -69,13 +70,15 @@ export default function SpeakerAnnouncement() {
 
             {/* CTA Button */}
             <div className="pt-2 md:pt-4 flex justify-center lg:justify-start">
+              <Link href="/registration">
               <Button
                 size="lg"
                 className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 md:px-8 py-4 md:py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-sm md:text-base"
               >
                 <Ticket className="w-4 h-4 md:w-5 md:h-5" />
-                Purchase Ticket
+          Register now
               </Button>
+              </Link>
             </div>
           </div>
         </div>

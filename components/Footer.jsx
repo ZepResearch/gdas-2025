@@ -221,7 +221,7 @@ export default function ConferenceFooter() {
                     href="mail:info@icsift.com"
                     className="inline-flex gap-4 text-white/70 hover:text-white transition-colors hover:underline "
                   >
-                   <Mail/> info@gdasummit.org
+                   <Mail/> 	info@gdasconference.com
                   </a>
                 </div>
               </li>
@@ -239,7 +239,7 @@ export default function ConferenceFooter() {
               <li>
                 <div className="space-y-1">
                   <p className="text-white/70 inline-flex gap-2">
-                   <MapPin/>Kuala Lumpur, Malaysia
+                   <MapPin/> Selangor/ Kuala Lumpur, Malaysia
                   </p>
                 </div>
               </li>
@@ -336,7 +336,7 @@ export default function ConferenceFooter() {
         </div> */}
 
         {/* Bottom Section */}
-        {/* <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
             © 2025 ICGEWEE. All rights reserved. Designed with sustainability in mind.
           </p>
@@ -364,7 +364,7 @@ export default function ConferenceFooter() {
              Equal Treatment Policy
             </Link>
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* Scroll to top button */}

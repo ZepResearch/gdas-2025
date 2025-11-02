@@ -97,10 +97,10 @@ export default function Navbar() {
 
             {/* Right Side Actions - Made responsive with smaller gaps and icons */}
             <div className="hidden md:flex items-center gap-2 lg:gap-4 flex-shrink-0">
-              
+               <Link href="/registration">
               <button className="px-3 lg:px-6 py-1.5 lg:py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium text-xs lg:text-sm rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
-                Book Tickets
-              </button>
+Register              </button>
+              </Link>
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 className="p-1.5 lg:p-2 text-gray-700 hover:text-gray-900 transition-colors duration-200 hover:bg-gray-100 rounded-lg flex-shrink-0"
@@ -160,9 +160,11 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
+              <Link href="/registration" className="block mt-2">
               <button className="w-full mt-4 px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
-                Book Tickets
+             Register
               </button>
+              </Link>
             </div>
           )}
         </div>

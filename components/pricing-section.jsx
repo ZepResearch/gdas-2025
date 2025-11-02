@@ -2,6 +2,7 @@
 
 import { Check } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function ConferenceTicketPage() {
 const tickets = [
@@ -92,6 +93,7 @@ const tickets = [
                   <p className={`text-sm mb-4 ${ticket.highlighted ? "text-blue-100" : "text-slate-600"}`}>
                     {ticket.description}
                   </p>
+             
                   <div className="flex items-baseline gap-1">
                     <span className={`text-4xl font-bold ${ticket.highlighted ? "text-white" : "text-slate-900"}`}>
                       {ticket.price}
@@ -100,6 +102,7 @@ const tickets = [
                       per ticket
                     </span>
                   </div>
+               
                 </div>
 
                 {/* Features list */}
@@ -120,6 +123,7 @@ const tickets = [
                 </div>
 
                 {/* CTA Button */}
+                     <Link href="/registration" className="underline text-sm mb-4 block">
                 <button
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ticket.highlighted
@@ -129,6 +133,7 @@ const tickets = [
                 >
                   Get Ticket
                 </button>
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -155,7 +160,7 @@ const tickets = [
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Location</p>
-                <p className="text-slate-600">Kuala Lumpur, Malaysia</p>
+                <p className="text-slate-600">Selangor/ Kuala Lumpur, Malaysia</p>
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Attendees</p>

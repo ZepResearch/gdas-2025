@@ -1,9 +1,9 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "Submission Successful - 3rd International Conference on Engineering, Management and Social Sciences",
+  title: "Submission Successful - The Global Defence and Aviation Skills Conference 2025 (GDAS 2025)",
   description:
-    "Your paper has been successfully submitted to 3rd International Conference on Engineering, Management and Social Sciences",
+    "Your paper has been successfully submitted to The Global Defence and Aviation Skills Conference 2025 (GDAS 2025)",
 }
 
 export default function SuccessPage() {

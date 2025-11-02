@@ -108,7 +108,7 @@ const SpeakerDrawer = ({ isOpen, onClose, speaker }) => {
                 <X className="h-5 w-5" />
               </button>
 
-              <div className="relative h-[320px] w-full rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200 mt-8 mb-8 shadow-lg">
+              <div className="relative h-[320px] w-full rounded-2xl  bg-gradient-to-br from-blue-100 to-blue-200 mt-8 mb-8 shadow-lg">
                 <img 
                   src={getImageUrl()}
                   alt={speaker.name} 

@@ -2,6 +2,7 @@
 
 import { TicketCheckIcon } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function DirectionSection() {
   return (
@@ -19,16 +20,16 @@ export default function DirectionSection() {
           {/* Left Card - Venue Info */}
           <div className="relative rounded-2xl overflow-hidden shadow-lg h-80">
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 opacity-90 " />
+            <div className="absolute inset-0 bg-blue-500  " />
             <Image
               src="https://images.unsplash.com/photo-1521334726092-b509a19597c6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1801"
               alt="Venue background"
               fill
-              className="object-cover"
+              className="object-cover opacity-20 bg-blue-500"
             />
 
             {/* Content */}
-            <div className="relative z-20 p-8 h-full flex flex-col justify-between text-white">
+            <div className="relative  p-8 h-full flex flex-col justify-between text-white">
               {/* Venue */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
@@ -119,10 +120,12 @@ export default function DirectionSection() {
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 ">
               Gotham Hall offers the perfect setting for more than just social occasions.
             </p>
+            <Link href="/registration">
             <button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 w-full md:w-auto drop-shadow-lg">
               <TicketCheckIcon/>
-              Book Your Room
+             Register
             </button>
+            </Link>
           </div>
       </div>
     </section>
