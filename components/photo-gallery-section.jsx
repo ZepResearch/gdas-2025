@@ -47,7 +47,7 @@ export default function PhotoGallerySection() {
             
 
               {/* Main heading */}
-              <h2 className="text-4xl md:text-6xl font-medium text-black">It was an amazing crowd</h2>
+              <h2 className="text-4xl md:text-6xl font-medium text-black">Conference Highlights</h2>
             </div>
           </div>
 

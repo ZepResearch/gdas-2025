@@ -239,7 +239,7 @@ Stay informed with the latest updates, insights, and announcements from the Glob
 
                 {/* Decorative SVG */}
                 <motion.div 
-                  className="absolute -right-12 -top-8 w-40 h-40 opacity-80"
+                  className="absolute -right-12 -top-8 sm:h-40 sm:w-40 w-32 h-32 opacity-80"
                   initial={{ opacity: 0, rotate: -45, scale: 0.5 }}
                   whileInView={{ opacity: 0.8, rotate: 0, scale: 1 }}
                   viewport={{ once: true }}
@@ -281,7 +281,7 @@ Stay informed with the latest updates, insights, and announcements from the Glob
 
       {/* Background Text */}
       <motion.div 
-        className="absolute bottom-0 right-0 text-8xl font-black text-blue-500 opacity-20 pointer-events-none overflow-hidden"
+        className="absolute bottom-0 right-0 text-5xl sm:text-8xl font-black text-blue-500 opacity-20 pointer-events-none overflow-hidden"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 0.2, x: 0 }}
         viewport={{ once: true }}

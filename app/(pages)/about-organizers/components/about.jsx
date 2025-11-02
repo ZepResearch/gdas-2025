@@ -54,11 +54,10 @@ export default function AboutSection() {
               {/* <h3 className="text-2xl lg:text-3xl font-bold text-blue-900 mb-4 text-center font-serif">Zep Research</h3> */}
               
               <p className="text-gray-600 leading-relaxed mb-6">
-                ZEP RESEARCH OPC PRIVATE LIMITED is a premier research organization dedicated to advance scientific knowledge and
-                technological innovation. Since our founding, we have been at the forefront of organizing world-class
-                conferences, symposiums, and research initiatives that bring together the brightest minds from academia
-                and industry.
+                Zep Research is a global leader in advancing academic excellence and fostering innovation through impactful conferences, research initiatives, and collaboration opportunities.
               </p>
+               <p className="text-gray-600 leading-relaxed mb-6">   We are committed to supporting academic organizations by expanding opportunities for professional development and advancing research on a global scale.</p>
+           
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -83,6 +82,11 @@ export default function AboutSection() {
                   </div>
                 </div>
               </div>
+              <Link href="https://zepresearch.com/" target="_blank" rel="noopener noreferrer">
+              <Button className='inline-flex bg-blue-500 mt-4 text-white items-center hover:brightness-110 ml-4' size='md'>
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              </Link>
             </Card>
 
             {/* DSAK Group */}
@@ -125,6 +129,11 @@ export default function AboutSection() {
                   </div>
                 </div>
               </div>
+               <Link href="https://www.dsakgroup.com/home" target="_blank" rel="noopener noreferrer">
+              <Button className='inline-flex bg-blue-500 mt-4 text-white items-center hover:brightness-110 ml-4' size='md'>
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              </Link>
             </Card>
           </div>
 
@@ -156,9 +165,9 @@ export default function AboutSection() {
             <div>
               <h2 className="text-4xl lg:text-6xl font-medium text-gray-900 mb-6 ">Our Shared Mission</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                To accelerate scientific progress and technological advancement by creating platforms for knowledge
-                exchange, collaboration, and innovation. We believe that breakthrough discoveries happen when diverse
-                minds come together to tackle humanity's greatest challenges.
+               Our mission is to enhance the quality of academic research, innovation, and collaboration globally. We aim to create an integrated platform that connects professionals, fosters growth and promotes excellence in research, conferences, and publications.
+
+Vision
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">

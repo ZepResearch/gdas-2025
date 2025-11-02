@@ -85,7 +85,7 @@ export default function DirectionSection() {
           {/* Left - Building Image with Text Overlay */}
           <div className="relative rounded-xl overflow-hidden shadow-lg h-64 md:h-72">
             <Image
-              src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+              src="https://images.unsplash.com/photo-1574218732130-6b19257fd9db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064"
               alt="Modern building"
               fill
               className="object-cover"
@@ -100,7 +100,7 @@ export default function DirectionSection() {
           {/* Right - Interior Image */}
           <div className="relative rounded-xl overflow-hidden shadow-lg h-64 md:h-72">
             <Image
-              src="https://images.unsplash.com/photo-1560523160-c4ef2f0c61a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+              src="https://images.unsplash.com/photo-1532442782935-dc7ee648a2a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1624"
               alt="Venue interior"
               fill
               className="object-cover"

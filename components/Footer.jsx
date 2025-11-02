@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useEffect } from "react"
@@ -15,9 +14,10 @@ import {
   Youtube,
   Mail,
   Contact,
-  TrendingUp,
-  Venus,
-  Scale
+  Plane,
+  Shield,
+  Target,
+  Radio
 } from "lucide-react"
 
 export default function ConferenceFooter() {
@@ -56,20 +56,12 @@ export default function ConferenceFooter() {
         { href: "/contact", label: "Contact" },
         { href: "/exhibit-and-sponsor", label: "Exhibit & Sponsor" },
         { href: "/registration", label: "Registration" },
-        // { href: "/privacy-policy", label: "Privacy Policy" },
       ],
     },
   ]
 
   // Conference information cards
   const conferenceCards = [
-    // {
-    //   title: "NextGen-Synergy 2025",
-    //   logo: "/conf/nextgen.ico?height=40&width=40",
-    //   location: "Delhi, India",
-    //   date: "August 21st -22nd , 2025",
-    //   href: "https://www.thenextgensynergy.com/",
-    // },
     {
       title: "Wfcces 2025",
       logo: "/conf/wfcces.png?height=40&width=40",
@@ -109,259 +101,210 @@ export default function ConferenceFooter() {
   }
 
   return (
-    <footer className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white overflow-hidden">
-      {/* 3D Geometric Elements */}
+    <footer className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white overflow-hidden">
+      {/* Military/Aviation Themed Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Large sphere */}
+        {/* Radar sweep effect */}
         <div
-          className="absolute -right-20 -bottom-40 w-80 h-80 rounded-full bg-gradient-to-b from-orange-500/20 to-yellow-300/30 "
-          style={{ filter: "blur(40px)" }}
-        ></div>
-        
-        {/* Small floating circles */}
-        <div
-          className="absolute left-1/4 top-1/4 w-16 h-16 rounded-full bg-yellow-300/10 animate-float-slow"
-          style={{ animationDelay: "0s" }}
-        ></div>
-        
-        <div
-          className="absolute right-1/3 top-1/2 w-12 h-12 rounded-full bg-yellow-300/10 animate-float"
-          style={{ animationDelay: "-2s" }}
-        ></div>
-        
-        <div
-          className="absolute left-1/2 bottom-1/4 w-20 h-20 rounded-full bg-yellow-300/10 animate-float-slow"
-          style={{ animationDelay: "-1s" }}
-        ></div>
-        
-        {/* Geometric shapes */}
-        <div
-          className="absolute left-10 bottom-10 w-32 h-32 bg-[#d3e4c5]/5"
-          style={{
-            clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-            transform: "rotate(15deg)",
+          className="absolute top-10 right-10 w-64 h-64 rounded-full border-2 border-blue-500/20"
+          style={{ 
+            background: "radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%)",
           }}
-        ></div>
-        
-        <div
-          className="absolute right-1/4 top-10 w-24 h-24 bg-[#d3e4c5]/5"
-          style={{
-            clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
-            transform: "rotate(-10deg)",
-          }}
-        ></div>
-        
-        {/* Subtle grid lines */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="h-px w-full bg-yellow-50 absolute top-1/4"></div>
-          <div className="h-px w-full bg-yellow-50  absolute top-2/4"></div>
-          <div className="h-px w-full bg-yellow-50  absolute top-3/4"></div>
-          <div className="w-px h-full bg-yellow-50  absolute left-1/4"></div>
-          <div className="w-px h-full bg-yellow-50  absolute left-2/4"></div>
-          <div className="w-px h-full bg-yellow-50  absolute left-3/4"></div>
+        >
+          <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-ping" style={{ animationDuration: "3s" }}></div>
         </div>
+        
+        {/* Hexagonal grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="hexagons" x="0" y="0" width="50" height="43.4" patternUnits="userSpaceOnUse">
+                <polygon points="24.8,22 37.3,29.2 37.3,43.7 24.8,50.9 12.3,43.7 12.3,29.2" fill="none" stroke="rgba(59, 130, 246, 0.3)" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hexagons)" />
+          </svg>
+        </div>
+
+        {/* Floating aircraft silhouettes */}
+        <div className="absolute left-1/4 top-1/4 opacity-10">
+          <Plane className="w-16 h-16 text-blue-400 animate-pulse" style={{ animationDuration: "4s" }} />
+        </div>
+        <div className="absolute right-1/3 top-1/2 opacity-10">
+          <Plane className="w-12 h-12 text-blue-500 animate-pulse" style={{ animationDuration: "5s", transform: "rotate(45deg)" }} />
+        </div>
+        
+        {/* Shield emblems */}
+        <div className="absolute left-10 bottom-20 opacity-5">
+          <Shield className="w-32 h-32 text-blue-400" />
+        </div>
+        <div className="absolute right-20 top-20 opacity-5">
+          <Shield className="w-24 h-24 text-blue-500" />
+        </div>
+
+        {/* Target reticle */}
+        <div className="absolute left-1/2 bottom-1/4 opacity-10">
+          <Target className="w-20 h-20 text-blue-400 animate-spin" style={{ animationDuration: "20s" }} />
+        </div>
+
+        {/* Scanning lines */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-400 to-transparent absolute top-1/4 animate-pulse"></div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-400 to-transparent absolute top-2/4" style={{ animationDelay: "1s" }}></div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-400 to-transparent absolute top-3/4" style={{ animationDelay: "2s" }}></div>
+        </div>
+
+        {/* Digital camouflage pattern overlay */}
+        <div className="absolute inset-0 opacity-3">
+          <div className="absolute top-0 left-0 w-20 h-20 bg-blue-900/20 transform rotate-12"></div>
+          <div className="absolute top-10 left-40 w-16 h-16 bg-slate-800/20 transform -rotate-6"></div>
+          <div className="absolute top-5 right-60 w-24 h-24 bg-blue-800/20 transform rotate-45"></div>
+          <div className="absolute bottom-20 left-1/3 w-18 h-18 bg-slate-900/20 transform -rotate-12"></div>
+        </div>
+
+        {/* Glowing accent lines */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 relative ">
+      <div className="container mx-auto px-4 py-16 relative">
         {/* Top Section with Logo/Description on left and Conference Cards on right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Left Side - Logo, Name, Description, Social Links */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-            <Link href={"/"}>
-            <div className="flex items-center space-x-2">
-            <Image src={"/logoX.jpg"} alt='logo' height={300} width={200} className="w text-white object-contain bg-blue-50 rounded-full p-2" />
-            {/* <Equal className="w-6 h-6 text-white" /> */}
-        </div>
-          </Link>
+              <Link href={"/"}>
+                <div className="flex items-center space-x-2">
+                  <Image 
+                    src={"/logoX.jpg"} 
+                    alt='logo' 
+                    height={300} 
+                    width={200} 
+                    className="w text-white object-contain bg-white rounded-full p-2 shadow-lg shadow-blue-500/50" 
+                  />
+                </div>
+              </Link>
             </div>
-            <p className="text-white/80 mb-6 max-w-xl">
-            The Global Defence and Aviation Skills Conference 2025  (GDAS 2025) positions Malaysia as the strategic hub for technical, vocational, and higher education excellence in the fields of aviation, aerospace, and defence technologies.
-
+            <p className="text-blue-100/90 mb-6 max-w-xl leading-relaxed">
+              The Global Defence and Aviation Skills Conference 2025 (GDAS 2025) positions Malaysia as the strategic hub for technical, vocational, and higher education excellence in the fields of aviation, aerospace, and defence technologies.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61561809783777"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
               >
                 <Facebook size={18} />
               </a>
               <a
                 href="https://www.instagram.com/zepresearch/"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="https://x.com/Zepresearch"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
               >
                 <Twitter size={18} />
               </a>
               <a
                 href="https://www.linkedin.com/company/zep-research/"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
               >
                 <Linkedin size={18} />
               </a>
               <a
                 href="https://www.youtube.com/@Zepresearch"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
               >
                 <Youtube size={18} />
               </a>
             </div>
-            <div className="mt-4">
-            <h4 className="font-bold text-lg mb-4">Contact Us</h4>
-            <ul className="space-y-4">
-              <li>
-                <div className="space-y-1">
-                  
-                  <a
-                    href="mail:info@icsift.com"
-                    className="inline-flex gap-4 text-white/70 hover:text-white transition-colors hover:underline "
-                  >
-                   <Mail/> 	info@gdasconference.com
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div className="space-y-1">
-                  {/* <p className="text-[#d3e4c5] text-sm">Phone</p> */}
-                  <a
-                    href="tel:+919237388328"
-                    className="inline-flex gap-2 text-white/70 hover:text-white transition-colors hover:underline "
-                  >
-                    <Contact/>+91 92373 88328
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div className="space-y-1">
-                  <p className="text-white/70 inline-flex gap-2">
-                   <MapPin/> Selangor/ Kuala Lumpur, Malaysia
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          </div>
-
-          {/* Right Side - Conference Cards */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {conferenceCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white/5 rounded-2xl p-4 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all group"
-              >
-                <div className="flex items-center mb-3">
-                  <div className="w-8 h-8 relative mr-2">
-                    <Image
-                      src={card.logo || "/placeholder.svg"}
-                      alt={`${card.title} Logo`}
-                      fill
-                      className="object-contain"
-                    />
+            <div className="mt-8">
+              <h4 className="font-bold text-lg mb-4 text-blue-300 flex items-center gap-2">
+                <Radio className="w-5 h-5" />
+                Contact Us
+              </h4>
+              <ul className="space-y-4">
+                <li>
+                  <div className="space-y-1">
+                    <a
+                      href="mail:info@gdasconference.com"
+                      className="inline-flex gap-4 text-blue-200/80 hover:text-blue-100 transition-colors hover:underline"
+                    >
+                      <Mail className="flex-shrink-0" /> info@gdasconference.com
+                    </a>
                   </div>
-                  <h3 className="text-base font-bold">{card.title}</h3>
-                </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 text-[#d3e4c5] mr-2 flex-shrink-0" />
-                    <span className="text-white/80">{card.date}</span>
+                </li>
+                <li>
+                  <div className="space-y-1">
+                    <a
+                      href="tel:+919237388328"
+                      className="inline-flex gap-2 text-blue-200/80 hover:text-blue-100 transition-colors hover:underline"
+                    >
+                      <Contact className="flex-shrink-0" />+91 92373 88328
+                    </a>
                   </div>
-                  <div className="flex items-center">
-                    <MapPin className="h-4 w-4 text-[#d3e4c5] mr-2 flex-shrink-0" />
-                    <span className="text-white/80">{card.location}</span>
+                </li>
+                <li>
+                  <div className="space-y-1">
+                    <p className="text-blue-200/80 inline-flex gap-2">
+                      <MapPin className="flex-shrink-0" /> Selangor/ Kuala Lumpur, Malaysia
+                    </p>
                   </div>
-                </div>
-                <div className="mt-3 pt-2 border-t border-white/10">
-                  <Link
-                    href={`${card.href}`}
-                    className="text-[#d3e4c5] hover:text-white text-sm flex items-center group-hover:underline"
-                  >
-                    View Details
-                    <ArrowUp className="h-3 w-3 ml-1 rotate-45" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div> */}
-        
-
-        {/* Navigation Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 ">
-          {/* Contact Information */}
-          
-          {footerLinks.map((group, index) => (
-            <div key={index}>
-              <h4 className="font-bold text-lg mb-4">{group.title}</h4>
-              <ul className="space-y-2">
-                {group.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link href={link.href} className="text-white/70 hover:text-white transition-colors hover:underline">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                </li>
               </ul>
             </div>
-          ))}
-        </div>
-        </div>
+          </div>
 
-        {/* Contact Information */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-white/5 rounded-2xl p-5 backdrop-blur-sm">
-            <div className="w-6 h-6 mb-3 text-[#d3e4c5] flex items-center justify-center">
-              <span className="text-xl font-bold">📧</span>
-            </div>
-            <h4 className="font-medium mb-1">Email Us</h4>
-            <p className="text-white/70">info@icsift.org</p>
+          {/* Navigation Links */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {footerLinks.map((group, index) => (
+              <div key={index} className="backdrop-blur-sm bg-blue-900/10 p-6 rounded-lg border border-blue-500/20 hover:border-blue-400/40 transition-all">
+                <h4 className="font-bold text-lg mb-4 text-blue-300">{group.title}</h4>
+                <ul className="space-y-2">
+                  {group.links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <Link 
+                        href={link.href} 
+                        className="text-blue-200/70 hover:text-blue-100 transition-colors hover:underline hover:translate-x-1 inline-block"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-          <div className="bg-white/5 rounded-2xl p-5 backdrop-blur-sm">
-            <div className="w-6 h-6 mb-3 text-[#d3e4c5] flex items-center justify-center">
-              <span className="text-xl font-bold">📍</span>
-            </div>
-            <h4 className="font-medium mb-1">Location</h4>
-            <p className="text-white/70">Queen Sirikit National Convention Center, Bangkok, Thailand</p>
-          </div>
-          <div className="bg-white/5 rounded-2xl p-5 backdrop-blur-sm">
-            <div className="w-6 h-6 mb-3 text-[#d3e4c5] flex items-center justify-center">
-              <span className="text-xl font-bold">📅</span>
-            </div>
-            <h4 className="font-medium mb-1">Conference Dates</h4>
-            <p className="text-white/70">December 26-27, 2024</p>
-          </div>
-        </div> */}
+        </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm mb-4 md:mb-0">
-            © 2025 ICGEWEE. All rights reserved. Designed with sustainability in mind.
+        <div className="border-t border-blue-500/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-blue-200/60 text-sm mb-4 md:mb-0">
+            © 2025 GDAS Conference. All rights reserved. Advancing Defence & Aviation Excellence.
           </p>
-          <div className="grid md:grid-cols-4 grid-cols-2  gap-8 text-center">
-            <Link href="/terms-and-conditions" className="text-white/60 text-sm hover:text-white transition-colors">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-8 text-center">
+            <Link href="/terms-and-conditions" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
               Terms of Service
             </Link>
-            <Link href="/privacy-policy" className="text-white/60 text-sm hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/cancellation-policy" className="text-white/60 text-sm hover:text-white transition-colors">
+            <Link href="/cancellation-policy" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
               Cancellation Policy
             </Link>
- <Link href="/complaints-policy" className="text-white/60 text-sm hover:text-[#00adef] transition-colors">
-             Complaints Policy
+            <Link href="/complaints-policy" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
+              Complaints Policy
             </Link>
-
-             <Link href="/disability-discrimination-policy" className="text-white/60 text-sm hover:text-[#00adef] transition-colors ">
-             Disability Discrimination Policy
+            <Link href="/disability-discrimination-policy" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
+              Disability Discrimination Policy
             </Link>
-            <Link href="/health-and-safety-policy" className="text-white/60 text-sm hover:text-[#00adef] transition-colors">
-             Health and Safety Policy
+            <Link href="/health-and-safety-policy" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
+              Health and Safety Policy
             </Link>
-            <Link href="/equal-treatment-policy" className="text-white/60 text-sm hover:text-[#00adef] transition-colors">
-             Equal Treatment Policy
+            <Link href="/equal-treatment-policy" className="text-blue-200/60 text-sm hover:text-blue-100 transition-colors">
+              Equal Treatment Policy
             </Link>
           </div>
         </div>
@@ -370,7 +313,7 @@ export default function ConferenceFooter() {
       {/* Scroll to top button */}
       <button
         onClick={scrollToTop}
-        className={`fixed right-28 bottom-6 w-12 h-12 rounded-full bg-[#5e96fd] text-[#c2c2c2] flex items-center justify-center shadow-lg transition-all duration-300 z-0 ${
+        className={`fixed right-8 bottom-6 w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 text-white flex items-center justify-center shadow-lg shadow-blue-500/50 transition-all duration-300 z-50 border border-blue-400/30 hover:shadow-blue-400/70 hover:scale-110 ${
           showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
       >

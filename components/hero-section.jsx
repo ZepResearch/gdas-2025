@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { motion } from "framer-motion"
 import { Ticket } from "lucide-react"
 import Image from "next/image"
@@ -7,6 +8,23 @@ import Link from "next/link"
 import { ReserveButton } from "./reserve-button"
 
 export default function EventLanding() {
+  const [currentImageIndex, setCurrentImageIndex] = React.useState(0)
+
+  const backgroundImages = [
+    "https://images.unsplash.com/photo-1508530786855-dfea35260b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "https://images.unsplash.com/photo-1481542290883-70166d3f0b57?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1849",
+    "https://images.unsplash.com/flagged/photo-1564773898290-8a11af34585a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2032",
+    "https://images.unsplash.com/photo-1504074922582-1dba5b9679b3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064"
+  ]
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length)
+    }, 5000) // Change image every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [backgroundImages.length])
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -60,17 +78,22 @@ export default function EventLanding() {
 
   return (
    <div className="relative overflow-hidden bg-gradient-to-r from-blue-500/80 to-blue-700/90 op">
-      {/* Background image with low opacity */}
-      <motion.div
-        className="absolute inset-0 w-full h-full  bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1508530786855-dfea35260b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740')",
-          backgroundBlendMode: "overlay"
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1 }}
-      />
+      {/* Background images with slideshow effect */}
+      {backgroundImages.map((image, index) => (
+        <motion.div
+          key={image}
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url('${image}')`,
+            backgroundBlendMode: "overlay"
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ 
+            opacity: index === currentImageIndex ? 0.15 : 0 
+          }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        />
+      ))}
       
       {/* Background decorative elements */}
       <motion.div
@@ -160,7 +183,7 @@ export default function EventLanding() {
             </Link>
           
           </motion.div>
- <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-5xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-2 ">
+ <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-center gap-3 px-3 max-w-7xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-2 ">
               <img
                 src="/assets/scopus.png"
                 alt=""
@@ -169,7 +192,7 @@ export default function EventLanding() {
               <img
                 src="/assets/clarivate.png"
                 alt=""
-                className="h-12 drop-shadow-lg"
+                className="h-10 drop-shadow-lg"
               />
               {/* <img
                 src="assets/cpd.png"
@@ -179,7 +202,7 @@ export default function EventLanding() {
               <img
                 src="assets/zepresearch.png"
                 alt=""
-                className="h-12 drop-shadow-lg"
+                className="h-10 drop-shadow-lg"
               />
               <img
                 src="assets/dsak-logo.jpg"
