@@ -10,7 +10,7 @@ const scheduleData = [
   {
     date: "08 Dec 2025 (Mon)",
     items: [
-      { time: "12 tgh – 5 petang", title: "Networking hitea & early registration" },
+      { time: "12 pm – 5 pm", title: "Early registration with social activity (Golf or Hi-Tea)" },
     ],
   },
   {
@@ -104,9 +104,9 @@ export default function ConferenceSchedule() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Venue</h3>
-                <p className="text-blue-700 font-medium mb-2"> Dorsett Grand Subang, Jalan SS12/1, 47500 Subang Jaya, Selangor, Malaysia</p>
+                <p className="text-blue-700 font-medium mb-2">Auditorium of The Royal Malaysian Air Force Leisure Club, Subang, Selangor</p>
                 <p className="text-gray-700 text-sm">
-                  Venue details will be confirmed upon registration. Located in the heart of Malaysia's capital city.
+                  Located in Subang, Selangor - a premier venue for executive-level defence and aviation gatherings.
                 </p>
               </div>
               <div>

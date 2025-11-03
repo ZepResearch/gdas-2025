@@ -10,7 +10,7 @@ const tickets = [
       name: "Students",
       price: "$199",
       description: "Student discount rate",
-      features: ["2-day summit access", "Welcome kit", "All meals included", "Networking sessions", "Certificate of attendance"],
+      features: ["Full conference access", "Student networking sessions", "Workshop materials", "Lunch and refreshments", "Certificate of participation","Career guidance sessions"],
       highlighted: false,
     },
     {
@@ -18,11 +18,11 @@ const tickets = [
       price: "$299",
       description: "Most popular",
       features: [
-        "2-day summit access",
-        "Welcome kit",
-        "All meals included",
-        "Networking sessions",
-        "Digital materials",
+        "Full conference access",
+        "VIP networking dinner",
+        "Priority seating",
+        "Exclusive roundtable sessions",
+        "Workshop materials",
         "Certificate of attendance",
       ],
       highlighted: true,
@@ -32,11 +32,11 @@ const tickets = [
       price: "$399",
       description: "Industry professionals",
       features: [
-        "2-day summit access",
-        "Welcome kit",
-        "All meals included",
-        "VIP networking lounge",
-        "Digital materials",
+        "Full conference access",
+        "VIP networking dinner",
+        "Priority seating",
+        "Exclusive roundtable sessions",
+        "Workshop materials",
         "Certificate of attendance",
         "1-on-1 mentoring session",
         "Exclusive gala dinner",
@@ -148,11 +148,10 @@ const tickets = [
         >
           <div className="bg-slate-50 rounded-xl p-8 max-w-2xl mx-auto">
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-             Global Defence and Aviation Skills Conference 2025 
+           GDAS 2025
             </h3>
             <p className="text-slate-600 mb-6">
-              Empowering the Future: Advancing Higher Education TVET for World-Class Military and Aviation Experts
-            </p>
+Join us at the Global Defence and Aviation Skills Conference 2025 (GDAS 2025) an international platform dedicated to strengthening collaboration between defence institutions, aviation academies, and higher education bodies.            </p>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
                 <p className="font-semibold text-slate-900">Dates</p>
@@ -164,7 +163,7 @@ const tickets = [
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Attendees</p>
-                <p className="text-slate-600">500+ Global Leaders</p>
+                <p className="text-slate-600">50+ Global Leaders</p>
               </div>
             </div>
           </div>

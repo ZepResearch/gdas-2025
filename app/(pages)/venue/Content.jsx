@@ -17,7 +17,7 @@ export default function VenuePage() {
     <div className="max-w-4xl mx-auto text-center mb-16">
       <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 mb-6 ">Conference Venue</h2>
       <p className="text-lg text-gray-600 leading-relaxed">
-        The <strong>Global Defence and Aviation Skills Conference 2025  (GDAS 2025)</strong> will take place at the prestigious <strong>Dorsett Grand Subang</strong> in Selangor, Malaysia. 
+        The <strong>Global Defence and Aviation Skills Conference 2025  (GDAS 2025)</strong> will take place at the prestigious <strong>Auditorium of The Royal Malaysian Air Force Leisure  Club</strong> in Selangor, Malaysia. 
         This elegant venue provides a sophisticated setting equipped with modern facilities, ideal for high-level discussions and international collaboration in defence, aviation, and higher education sectors.
       </p>
     </div>
@@ -25,7 +25,7 @@ export default function VenuePage() {
     <div className="relative w-full h-[350px] mb-12 rounded-xl overflow-hidden shadow-2xl">
       <img 
         src="/assets/venue.webp" 
-        alt="Dorsett Grand Subang Hotel"
+        alt="  Auditorium of The Royal Malaysian Air Force Leisure  Club"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent flex items-center"></div>
@@ -94,7 +94,7 @@ export default function VenuePage() {
               <div>
                 <p className="font-semibold text-gray-900">Address</p>
                 <p className="text-gray-600">
-                  Dorsett Grand Subang, Jalan SS12/1, 47500 Subang Jaya, Selangor, Malaysia
+                 Auditorium of The Royal Malaysian Air Force Leisure  Club, Jalan Tudm, Tentera Udara Diraja Malaysia Subang, 40150 Shah Alam, Selangor, Malaysia
                 </p>
               </div>
             </div>
@@ -145,13 +145,14 @@ export default function VenuePage() {
         <h3 className="text-xl font-semibold text-gray-900 mb-4">Interactive Map</h3>
         <div className="w-full h-96 rounded-lg overflow-hidden">
           <iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0557433944346!2d101.59396217497093!3d3.0797943968958807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c672220b503%3A0xe620547645d4c671!2sDorsett%20Grand%20Subang!5e0!3m2!1sen!2sin!4v1761816230426!5m2!1sen!2sin"            width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63742.16259184445!2d101.5369652!3d3.1250565!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4e05584bc271%3A0x4c19c2c4a4259972!2sAir%20Force%20Recreation%20Club!5e0!3m2!1sen!2sin!4v1762177205572!5m2!1sen!2sin"
+              width='100%'
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Dorsett Grand Subang Location"
+            title="  Auditorium of The Royal Malaysian Air Force Leisure  Club"
           ></iframe>
         </div>
       </Card>

@@ -119,8 +119,7 @@ export default function TimelineSection() {
             </h2>
 
             <p className="text-gray-900 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-              Stay updated with all the key dates and deadlines for the International Conference on Applied Science,
-              Engineering & Management
+              Stay updated with all the key dates and deadlines for the Global Defence and Aviation Skills Conference 2025
             </p>
           </div>
         </div>

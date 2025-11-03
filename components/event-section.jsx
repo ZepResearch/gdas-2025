@@ -125,13 +125,12 @@ export default function EventSection() {
                 className="text-gray-700 text-base leading-relaxed"
                 variants={fadeInUp}
               >
-Stay informed with the latest updates, insights, and announcements from the Global Defence and Aviation Skills Conference 2025  (GDAS 2025)              </motion.p>
+Stay informed with the latest updates, insights, and announcements from the Global Defence and Aviation Skills Conference 2025 (GDAS 2025) — an international platform shaping the future of defence, aviation, and aerospace education.            </motion.p>
               <motion.p 
                 className="text-gray-700 text-base leading-relaxed"
                 variants={fadeInUp}
               >
-               the leading global forum advancing collaboration between defence, aviation, and education sectors. From keynote highlights to new partnership opportunities, GDAS 2025 keeps you connected to what’s shaping the future of global security and aerospace innovation.
-              </motion.p>
+GDAS 2025 serves as a global hub for collaboration between defence organizations, academic institutions, and industry pioneers. From keynote sessions to networking opportunities, the conference empowers participants to explore innovations that strengthen global security and advance technical excellence in aviation and defence training.              </motion.p>
             </div>
 
             {/* Statistics Card */}
@@ -186,7 +185,7 @@ Stay informed with the latest updates, insights, and announcements from the Glob
                     viewport={{ once: true }}
                     transition={{ delay: 0.6, type: "spring", stiffness: 150 }}
                   >
-                    250<span className="text-3xl">+</span>
+                    100<span className="text-3xl">+</span>
                   </motion.div>
                   <p className="text-gray-700 font-medium text-sm lg:text-base">Journalists</p>
                 </motion.div>
@@ -209,7 +208,7 @@ Stay informed with the latest updates, insights, and announcements from the Glob
                     viewport={{ once: true }}
                     transition={{ delay: 0.7, type: "spring", stiffness: 150 }}
                   >
-                    37<span className="text-3xl">+</span>
+                    20<span className="text-3xl">+</span>
                   </motion.div>
                   <p className="text-gray-700 font-medium text-sm lg:text-base">Speakers</p>
                 </motion.div>
@@ -232,7 +231,7 @@ Stay informed with the latest updates, insights, and announcements from the Glob
                     viewport={{ once: true }}
                     transition={{ delay: 0.8, type: "spring", stiffness: 150 }}
                   >
-                    4,300<span className="text-3xl">+</span>
+                    150<span className="text-3xl">+</span>
                   </motion.div>
                   <p className="text-gray-700 font-medium text-sm lg:text-base">Attendees</p>
                 </motion.div>

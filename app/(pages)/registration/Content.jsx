@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Users, CreditCard, DollarSign } from "lucide-react"
+import { Users, CreditCard, DollarSign, Check } from "lucide-react"
 import { PaymentForm } from "./components/payment-form"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -179,45 +179,46 @@ export default function RegistrationPage() {
     return (
       <div
         key={categoryData.category}
-        className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col min-h-[600px]"
+        className="group bg-white rounded-2xl border border-blue-100 overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex flex-col min-h-[600px]"
       >
-        <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-6 h-60">
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center space-x-2">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/80 text-gray-900">
-                {categoryData.category}
-              </span>
-            </div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 p-0.5">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
-                <Users className="h-5 w-5 text-gray-900" />
+        <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 p-8 h-64 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent"></div>
+          <div className="relative z-10">
+            <div className="flex justify-between items-center mb-6">
+              <div className="flex items-center space-x-2">
+                <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-blue-700 shadow-md">
+                  {categoryData.category}
+                </span>
+              </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm p-0.5 shadow-lg">
+                <div className="flex h-full w-full items-center justify-center rounded-xl bg-white">
+                  <Users className="h-6 w-6 text-blue-600" />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="space-y-2">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-800">Price:</span>
-              <span className="text-lg font-bold text-black">
-                {getCurrencySymbol(categoryData.currency)}
-                {categoryData.price}
-              </span>
+            <div className="space-y-3 mt-8">
+              <div className="flex flex-col space-y-1">
+                <span className="text-sm text-blue-100 font-medium">Registration Price</span>
+                <span className="text-5xl font-bold text-white">
+                  {getCurrencySymbol(categoryData.currency)}
+                  {categoryData.price}
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="p-6 flex flex-col flex-1">
+        <div className="p-8 flex flex-col flex-1 bg-gradient-to-b from-blue-50/50 to-white">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-black mb-4">deliverables</h3>
-            <ul className="space-y-3 mb-6">
+            <h3 className="text-xl font-bold text-blue-900 mb-6 uppercase tracking-wide">What's Included</h3>
+            <ul className="space-y-4 mb-8">
               {categoryData.features.map((feature, i) => (
-                <li key={i} className="flex items-start">
-                  <div className="h-5 w-5 rounded-full bg-gray-100 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
-                    <svg className="h-3 w-3 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                <li key={i} className="flex items-start group/item">
+                  <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-md group-hover/item:scale-110 transition-transform">
+                    <Check className="h-4 w-4 text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-gray-800 text-sm">{feature}</span>
+                  <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -232,10 +233,10 @@ export default function RegistrationPage() {
                 category: categoryData.category,
               })
             }
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full"
+            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl py-6 font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
           >
-            <CreditCard className="mr-2 h-4 w-4 text-white" />
-            Register - ${categoryData.price}
+            <CreditCard className="mr-2 h-5 w-5 text-white" />
+            Register Now - ${categoryData.price}
           </Button>
         </div>
       </div>
@@ -243,75 +244,79 @@ export default function RegistrationPage() {
   }
 
   return (
-    <main className="">
+    <main className="bg-gradient-to-b from-blue-50 to-white min-h-full">
       {/* Registration Cards */}
-      <section className="py-16 ">
+      <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-6xl font-medium text-black mb-6 ">Registration Options</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-medium  mb-4">
+              Registration Options
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Choose the perfect plan for your conference experience</p>
           </div>
 
           <Tabs defaultValue="standard" className="w-full" onValueChange={setActiveTab}>
-            <div className="flex justify-center mb-10">
-              <TabsList className="bg-gray-100 p-1 rounded-full">
+            <div className="flex justify-center mb-12">
+              <TabsList className="bg-white border border-blue-100 p-1.5 rounded-2xl shadow-lg">
                 <TabsTrigger
                   value="standard"
-                  className="rounded-full data-[state=active]:bg-gradient-to-r from-blue-500 to-blue-600 data-[state=active]:text-white px-6 py-2"
+                  className="rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-700 data-[state=active]:text-white data-[state=active]:shadow-md px-8 py-3 font-medium transition-all duration-300"
                 >
-                  <Users className="mr-2 h-4 w-4" />
+                  <Users className="mr-2 h-5 w-5" />
                   Standard Registration
                 </TabsTrigger>
                 <TabsTrigger
                   value="custom"
-                  className="rounded-full data-[state=active]:bg-gradient-to-r from-blue-500 to-blue-600 data-[state=active]:text-white px-6 py-2"
+                  className="rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-700 data-[state=active]:text-white data-[state=active]:shadow-md px-8 py-3 font-medium transition-all duration-300"
                 >
-                  <DollarSign className="mr-2 h-4 w-4" />
+                  <DollarSign className="mr-2 h-5 w-5" />
                   Custom Payment
                 </TabsTrigger>
               </TabsList>
             </div>
 
             <TabsContent value="standard" className="mt-0">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-black mb-3">Conference Registration</h3>
-                <p className="text-gray-700 max-w-2xl mx-auto">Choose your registration tier to get started</p>
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-blue-900 mb-3">Conference Registration</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto text-lg">Choose your registration tier to get started</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {pricingData.map((categoryData) => renderPricingCard(categoryData))}
               </div>
             </TabsContent>
 
             <TabsContent value="custom" className="mt-0">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-[black] mb-3">Custom Payment</h3>
-                <p className="text-gray-700 max-w-2xl mx-auto">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-bold text-blue-900 mb-3">Custom Payment</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                   Enter a custom amount for your registration or additional services
                 </p>
               </div>
 
-              <div className="max-w-md mx-auto">
-                <div className="bg-white rounded-3xl border  overflow-hidden shadow-sm">
-                  <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-6">
-                    <div className="flex justify-between items-center">
-                      <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+              <div className="max-w-lg mx-auto">
+                <div className="bg-white rounded-2xl border border-blue-100 overflow-hidden shadow-xl">
+                  <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 p-8 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent"></div>
+                    <div className="relative z-10 flex justify-between items-center">
+                      <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-blue-700 shadow-md">
                         Custom Payment
                       </span>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900/90 p-0.5">
-                        <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
-                          <DollarSign className="h-5 w-5 text-gray-900" />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm p-0.5 shadow-lg">
+                        <div className="flex h-full w-full items-center justify-center rounded-xl bg-white">
+                          <DollarSign className="h-6 w-6 text-blue-600" />
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="mb-6">
-                      <label htmlFor="customAmount" className="block text-[black] font-medium mb-2">
+                  <div className="p-8 bg-gradient-to-b from-blue-50/50 to-white">
+                    <div className="mb-8">
+                      <label htmlFor="customAmount" className="block text-blue-900 font-semibold mb-3 text-lg">
                         Enter Amount (USD)
                       </label>
                       <div className="relative">
-                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black">$</span>
+                        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-600 font-bold text-lg">$</span>
                         <input
                           id="customAmount"
                           type="number"
@@ -319,30 +324,30 @@ export default function RegistrationPage() {
                           step="0.01"
                           value={customAmount}
                           onChange={(e) => setCustomAmount(e.target.value)}
-                          className="w-full pl-8 pr-4 py-3 rounded-xl border  focus:ring  focus:border-transparent outline-none"
-                          placeholder="Enter amount"
+                          className="w-full pl-10 pr-4 py-4 rounded-xl border-2 border-blue-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-lg font-semibold text-gray-800"
+                          placeholder="0.00"
                         />
                       </div>
-                      <p className="text-sm text-[black] mt-2">A 6% tax will be added to this amount</p>
+                      <p className="text-sm text-blue-600 mt-3 font-medium">A 6% tax will be added to this amount</p>
                     </div>
 
                     {customAmount && !isNaN(Number.parseFloat(customAmount)) && Number.parseFloat(customAmount) > 0 && (
-                      <div className="space-y-2 mb-6 p-4  rounded-xl border ">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-[black]">Base Amount:</span>
-                          <span className="text-[black] font-medium">
+                      <div className="space-y-3 mb-8 p-6 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl border border-blue-200 shadow-inner">
+                        <div className="flex justify-between text-base">
+                          <span className="text-blue-900 font-medium">Base Amount:</span>
+                          <span className="text-blue-900 font-bold">
                             ${Number.parseFloat(customAmount).toFixed(2)}
                           </span>
                         </div>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-gray-800">Tax (6%):</span>
-                          <span className="text-gray-800 font-medium">
+                        <div className="flex justify-between text-base">
+                          <span className="text-blue-800 font-medium">Tax (6%):</span>
+                          <span className="text-blue-800 font-bold">
                             ${(Number.parseFloat(customAmount) * 0.06).toFixed(2)}
                           </span>
                         </div>
-                        <div className="flex justify-between text-sm font-medium pt-2 border-t border-[#d3e4c5]">
-                          <span className="text-black">Total:</span>
-                          <span className="text-[#1a2e1a] font-bold">
+                        <div className="flex justify-between text-lg font-bold pt-3 border-t-2 border-blue-300">
+                          <span className="text-blue-900">Total:</span>
+                          <span className="text-blue-700 text-xl">
                             ${(Number.parseFloat(customAmount) * 1.06).toFixed(2)}
                           </span>
                         </div>
@@ -351,9 +356,9 @@ export default function RegistrationPage() {
 
                     <Button
                       onClick={handleCustomPayment}
-                      className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full"
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl py-6 font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
                     >
-                      <CreditCard className="mr-2 h-4 w-4 text-white" />
+                      <CreditCard className="mr-2 h-5 w-5 text-white" />
                       Proceed to Payment
                     </Button>
                   </div>
