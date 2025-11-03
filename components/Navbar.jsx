@@ -16,6 +16,7 @@ export default function Navbar() {
     setOpenDropdown(openDropdown === title ? null : title)
   }
  const navLinks = [
+    { title: "HOME", href: "/" },
   {
     title: "ABOUT",
     href: "#",
@@ -48,17 +49,8 @@ export default function Navbar() {
         <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto">
           <div className="flex items-center justify-between h-14 sm:h-auto ">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-1 sm:gap-2">
-                <Image
-                  src="/logoX.jpg"
-                  alt="Evenex Logo"
-                  width={320}
-                  height={320}
-                  className="w-12 h-12   sm:w-32 sm:h-32"
-                />
-               
-              </Link>
+            <div className="flex-shrink-0 py-12">
+             
             </div>
 
             {/* Desktop Navigation - Made responsive with smaller gaps and text on medium screens */}

@@ -34,16 +34,7 @@ export default function Sidebar({ isOpen, onClose }) {
 
         {/* Logo */}
         <div className="flex items-center gap-2 mb-6 sm:mb-8 mt-2 sm:mt-4">
-          <Link href="/" className="flex items-center gap-1 sm:gap-2">
-                <Image
-                  src="/logoX.jpg"
-                  alt="Evenex Logo"
-                  width={320}
-                  height={320}
-                  className="w-60 h-60 sm:w-32 sm:h-32"
-                />
-               
-              </Link>
+         
         </div>
 
         {/* Content */}

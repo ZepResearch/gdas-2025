@@ -174,15 +174,7 @@ export default function ConferenceFooter() {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <Link href={"/"}>
-                <div className="flex items-center space-x-2">
-                  <Image 
-                    src={"/logoX.jpg"} 
-                    alt='logo' 
-                    height={300} 
-                    width={200} 
-                    className="w text-white object-contain bg-white rounded-full p-2 shadow-lg shadow-blue-500/50" 
-                  />
-                </div>
+                
               </Link>
             </div>
             <p className="text-blue-100/90 mb-6 max-w-xl leading-relaxed">

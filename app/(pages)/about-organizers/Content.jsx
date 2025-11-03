@@ -5,7 +5,7 @@ import AboutSection from "./components/about"
 export default function AboutOrganizerPage() {
   return (
     <div className="min-h-screen bg-white">
-    /* Hero Banner */
+  
     <div className="relative h-96 overflow-hidden">
       <img
         src="/assets/about-organizer.webp"

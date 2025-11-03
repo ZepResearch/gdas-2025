@@ -159,7 +159,7 @@ export default function ExhibitSponsorPage() {
     ]
   
   return (
-    <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+    <div className="min-h-full bg-gray-100 relative overflow-hidden">
       {/* Background grid pattern */}
       <div className="absolute inset-0 opacity-20">
         <div
