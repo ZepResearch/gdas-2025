@@ -21,7 +21,7 @@ function page() {
         {/* Hero Content */}
         <div className="relative h-full flex flex-col justify-center items-start px-4 max-w-screen-2xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-medium   leading-tight text-white mb-2"> Venue</h1>
-          <p className="text-xl text-white/90">Learn more about our GDAS 2025</p>
+          <p className="text-xl text-white/90">it’s a global initiative focused on shaping the future of defence, aviation, and aerospace education.</p>
         </div>
 
       </div>
