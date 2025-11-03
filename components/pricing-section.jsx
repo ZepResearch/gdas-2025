@@ -163,7 +163,7 @@ Join us at the Global Defence and Aviation Skills Conference 2025 (GDAS 2025) an
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Attendees</p>
-                <p className="text-slate-600">50+ Global Leaders</p>
+                <p className="text-slate-600">150+ Global Leaders</p>
               </div>
             </div>
           </div>

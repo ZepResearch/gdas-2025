@@ -169,11 +169,11 @@ export default function TimelineSection() {
                       </div>
 
                       {/* Description (if available) */}
-                      {item.description && (
+                      {/* {item.description && (
                         <div className="flex-grow">
                           <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                         </div>
-                      )}
+                      )} */}
 
                       {/* Bottom accent */}
                       <div className="mt-auto pt-4">
