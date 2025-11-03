@@ -53,7 +53,7 @@ export default function DirectionSection() {
               {/* Get Directions Link */}
               <div>
                 <a
-                  href="https://maps.app.goo.gl/zuZN5VqFQxtJxEJj8"
+                  href="https://maps.app.goo.gl/x7HrSnZoo6fwbccL8"
                   className="flex items-center gap-2 text-white font-semibold hover:opacity-80 transition-opacity"
                 >
                   <div className="w-2 h-2 bg-white rounded-full" />
