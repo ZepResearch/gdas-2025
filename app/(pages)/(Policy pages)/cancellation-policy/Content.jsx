@@ -52,11 +52,11 @@ export default function CancellationPolicyPage() {
                   <h3 className="font-semibold text-gray-900 mb-3">Refund Schedule</h3>
                   <div className="space-y-4">
                     <div className="border-l-4 border-green-500 pl-4 bg-green-50 p-3 rounded-r">
-                      <h4 className="font-semibold text-green-800">60+ days before conference</h4>
+                      <h4 className="font-semibold text-green-800">30+ days before conference</h4>
                       <p className="text-green-700">Full refund</p>
                     </div>
                     <div className="border-l-4 border-red-500 pl-4 bg-red-50 p-3 rounded-r">
-                      <h4 className="font-semibold text-red-800">Less than 60 days before conference</h4>
+                      <h4 className="font-semibold text-red-800">Less than 20 days before conference</h4>
                       <p className="text-red-700">No refund available</p>
                     </div>
                   </div>
@@ -122,11 +122,11 @@ export default function CancellationPolicyPage() {
                   <h3 className="font-semibold text-gray-900 mb-3">Exhibition Booth Cancellation</h3>
                   <div className="space-y-4">
                     <div className="border-l-4 border-green-500 pl-4 bg-green-50 p-3 rounded-r">
-                      <h4 className="font-semibold text-green-800">60+ days before conference</h4>
+                      <h4 className="font-semibold text-green-800">30+ days before conference</h4>
                       <p className="text-green-700">Full refund</p>
                     </div>
                     <div className="border-l-4 border-red-500 pl-4 bg-red-50 p-3 rounded-r">
-                      <h4 className="font-semibold text-red-800">Less than 60 days before conference</h4>
+                      <h4 className="font-semibold text-red-800">Less than 20 days before conference</h4>
                       <p className="text-red-700">No refund available</p>
                     </div>
                   </div>
@@ -135,11 +135,11 @@ export default function CancellationPolicyPage() {
                   <h3 className="font-semibold text-gray-900 mb-3">Sponsorship Cancellation</h3>
                   <div className="space-y-4">
                     <div className="border-l-4 border-green-500 pl-4 bg-green-50 p-3 rounded-r">
-                      <h4 className="font-semibold text-green-800">60+ days before conference</h4>
+                      <h4 className="font-semibold text-green-800">30+ days before conference</h4>
                       <p className="text-green-700">100% refund of sponsorship fee</p>
                     </div>
                     <div className="border-l-4 border-red-500 pl-4 bg-red-50 p-3 rounded-r">
-                      <h4 className="font-semibold text-red-800">Less than 60 days before conference</h4>
+                      <h4 className="font-semibold text-red-800">Less than 20 days before conference</h4>
                       <p className="text-red-700">No refund available</p>
                     </div>
                   </div>

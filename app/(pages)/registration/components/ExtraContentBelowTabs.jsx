@@ -53,7 +53,7 @@ function ExtraContentBelowTabs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-gray-700">Full refund if cancelled 60+ days before the event</span>
+                <span className="text-gray-700">Full refund if cancelled 30+ days before the event</span>
               </li>
               {/* <li className="flex items-start">
                 <div className="h-5 w-5 rounded-full bg-gray-200 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
@@ -69,7 +69,7 @@ function ExtraContentBelowTabs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-gray-700">No refund if cancelled 60 days or less before the event</span>
+                <span className="text-gray-700">No refund if cancelled 20 days or less before the event</span>
               </li>
             </ul>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import VenuePage from './Content'
 import { venueMetadata } from '@/components/metadata'
+import Image from 'next/image'
 
 export const metadata = venueMetadata
 function page() {
@@ -20,6 +21,13 @@ function page() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-blue-500/50"></div>
         {/* Hero Content */}
         <div className="relative h-full flex flex-col justify-center items-start px-4 max-w-screen-2xl mx-auto">
+          <Image
+            src="/assets/krtu.png"
+            alt="Logo"
+            width={200}
+            height={200}
+            className="mb-4 bg-white rounded-full"
+          />
           <h1 className="text-4xl md:text-6xl font-medium   leading-tight text-white mb-2"> Venue</h1>
           <p className="text-xl text-white/90">it’s a global initiative focused on shaping the future of defence, aviation, and aerospace education.</p>
         </div>

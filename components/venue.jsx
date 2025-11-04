@@ -108,16 +108,15 @@ export default function DirectionSection() {
          <div className="flex flex-col md:flex-row justify-between items-center h-full mt-4">
             <div className="flex flex-col   md:border-r-4 border-blue-500 pb-4 md:pr-4">
 <h3 className=" font-black text-2xl md:text-3xl leading-tight">
-                  LIGHTS.
+                  CONNECT.  
                   <br />
-                  CAMERA.
+                COLLABORATE.
                   <br />
-                  PARTY!
+               CELEBRATE!.
                 </h3>
             </div>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 ">
-              Gotham Hall offers the perfect setting for more than just social occasions.
-            </p>
+ where global leaders meet, ideas spark, and partnerships grow beyond the conference halls.            </p>
             <Link href="/registration">
             <button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 w-full md:w-auto drop-shadow-lg">
               <TicketCheckIcon/>
