@@ -20,7 +20,7 @@ function page() {
         </div>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-blue-500/50"></div>
         {/* Hero Content */}
-        <div className="relative h-full flex flex-col justify-center items-start px-4 max-w-screen-2xl mx-auto">
+        <div className="relative h-full flex flex-col justify-center items-center px-4 max-w-screen-2xl mx-auto">
           <Image
             src="/assets/krtu.png"
             alt="Logo"
