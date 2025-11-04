@@ -18,7 +18,7 @@ function page() {
         </div>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/60 to-blue-500/50"></div>
         {/* Hero Content */}
-        <div className="relative h-full flex flex-col justify-center items-start px-4 max-w-screen-2xl mx-auto">
+        <div className="relative h-full flex flex-col justify-center items-center px-4 max-w-screen-2xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-medium   leading-tight text-white mb-2">Exhibition & Sponsor</h1>
           <p className="text-xl text-white/90 w-4xl">  Select the sponsorship package that best suits your organization's goals and budget</p>
         </div>

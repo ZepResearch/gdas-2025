@@ -276,11 +276,7 @@ export default function RegistrationPage() {
             </div>
 
             <TabsContent value="standard" className="mt-0">
-              <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold text-blue-900 mb-3">Conference Registration</h3>
-                <p className="text-gray-600 max-w-2xl mx-auto text-lg">Choose your registration tier to get started</p>
-              </div>
-
+          
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {pricingData.map((categoryData) => renderPricingCard(categoryData))}
               </div>
