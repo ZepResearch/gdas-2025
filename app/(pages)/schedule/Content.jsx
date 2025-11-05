@@ -10,7 +10,28 @@ const scheduleData = [
   {
     date: "08 Dec 2025 (Mon)",
     items: [
-      { time: "12 pm – 5 pm", title: "Early registration with social activity (Golf or Hi-Tea)" },
+      { time: "12 pm – 5 pm", title: "Early registration with social activity" },
+      { 
+        time: "Available Activities", 
+        title: "Recreational & Leisure Activities in Selangor",
+        isHeader: true
+      },
+      { 
+        time: " Golf", 
+        title: "Golf at KRTU (Royal Malaysian Air Force College) - Scenic 18-hole course in a prestigious military setting"
+      },
+      { 
+        time: " Cultural", 
+        title: "Sultan Salahuddin Abdul Aziz Shah Blue Mosque - Explore one of Southeast Asia's largest mosques with spectacular architecture"
+      },
+      { 
+        time: " Entertainment", 
+        title: "I-City Shah Alam - City of Digital Lights with Snowalk winter park and family-friendly attractions"
+      },
+      { 
+        time: " Adventure", 
+        title: "Flying Fox at Shah Alam Lake Gardens - Exciting zipline experience with beautiful lakeside scenery"
+      },
     ],
   },
   {
@@ -82,12 +103,24 @@ export default function ConferenceSchedule() {
                           <div
                             key={itemIndex}
                             className={cn(
-                              "grid grid-cols-[160px_1fr] gap-4 p-3 rounded-lg",
-                              "bg-blue-50 hover:bg-blue-100 transition-colors",
+                              "grid gap-4 p-3 rounded-lg",
+                              item.isHeader 
+                                ? "bg-blue-100 border-l-4 border-blue-600" 
+                                : "grid-cols-[160px_1fr] bg-blue-50 hover:bg-blue-100 transition-colors"
                             )}
                           >
-                            <div className="text-sm font-medium text-blue-700">{item.time}</div>
-                            <div className="text-sm text-gray-900 font-medium">{item.title}</div>
+                            <div className={cn(
+                              "text-sm font-medium",
+                              item.isHeader ? "text-blue-900 text-base" : "text-blue-700"
+                            )}>
+                              {item.time}
+                            </div>
+                            <div className={cn(
+                              "text-sm font-medium",
+                              item.isHeader ? "text-blue-800 font-bold" : "text-gray-900"
+                            )}>
+                              {item.title}
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -111,8 +144,6 @@ export default function ConferenceSchedule() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Registration</h3>
-                {/* <p className="text-blue-700 mb-2">Day 1: Registration opens at 7:30 AM</p>
-                <p className="text-blue-700 mb-2">Day 2: Registration opens at 8:00 AM</p> */}
                 <p className="text-gray-700 text-sm">
                   Please bring your confirmation credentials and official identification for executive check-in.
                 </p>
@@ -123,6 +154,39 @@ export default function ConferenceSchedule() {
               <p className="text-gray-700">
                 This executive-level international summit addresses the critical mission of building world-class defence and aviation experts through enhanced higher education and TVET systems. The summit fosters cross-border cooperation, establishes policy frameworks for advanced skills training, and creates a unified ecosystem linking government, academia, and industry.
               </p>
+            </div>
+            
+            <div className="mt-6 pt-6 border-t border-blue-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Day 1 Activities (Dec 8)</h3>
+              <p className="text-gray-700 mb-4">
+                Early-arrived participants can enjoy various recreational and leisure activities in Selangor, showcasing the state's natural beauty, religious landmarks, and modern attractions.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2">
+                                        <h4 className="font-semibold text-gray-900">Golf at KRTU</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Scenic 18-hole course at Royal Malaysian Air Force College for networking in a relaxed environment.</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2">
+                                        <h4 className="font-semibold text-gray-900">Blue Mosque</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">One of Southeast Asia's largest mosques with spectacular Islamic architecture and serene gardens.</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2">
+                                        <h4 className="font-semibold text-gray-900">I-City Shah Alam</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">City of Digital Lights featuring Snowalk winter park and family-friendly entertainment.</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2">
+                                        <h4 className="font-semibold text-gray-900">Flying Fox Adventure</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Exciting zipline experience at Shah Alam Lake Gardens with beautiful scenery.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
