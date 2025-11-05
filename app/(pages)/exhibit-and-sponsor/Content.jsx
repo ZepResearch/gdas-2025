@@ -212,7 +212,7 @@ export default function ExhibitSponsorPage() {
                     <Mail className="w-8 h-8 mx-auto mb-4" />
                     <h3 className="text-lg font-semibold mb-2 drop-shadow-2xl">Email Us</h3>
                     <p className="text-sm  mb-3 drop-shadow-2xl">Get detailed sponsorship and exhibition information</p>
-                    <p className="font-semibold">info@gdasummit.org</p>
+                    <p className="font-semibold">info@gdasconference.com</p>
                   </div>
                 </Card>
                 <Card className="p-6 bg-white/20 backdrop-blur-sm border-0">
