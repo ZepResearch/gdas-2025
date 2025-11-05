@@ -103,7 +103,7 @@ export default function ContactUs() {
             transition={{ delay: 0.2 }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1629793168399-1b028d0df502?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1648"
+              src="/gallery/g3.jpg"
               alt="Contact Us"
               width={400}
               height={300}
@@ -125,11 +125,11 @@ export default function ContactUs() {
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2 text-blue-600" />
-                  <span>+91 82606 84845</span>
+                  <span>+91 92373 88328</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="mr-2 text-blue-600" />
-                  <span>DCB-330, 3rd Floor, DLF Cyber City, Patia, Bhubaneswar, ODISHA - 751024 India</span>
+                  <MapPin className="mr-2 text-blue-600 h-12 w-12" />
+                  <span>Auditorium of The Royal Malaysian Air Force Leisure Club, Jalan Tudm, Tentera Udara Diraja Malaysia Subang, 40150 Shah Alam, Selangor, Malaysia</span>
                 </div>
               </div>
             </div>
