@@ -159,7 +159,7 @@ Join us at the Global Defence and Aviation Skills Conference 2025 (GDAS 2025) an
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Location</p>
-                <p className="text-slate-600">Selangor/ Kuala Lumpur, Malaysia</p>
+                <p className="text-slate-600">Selangor, Malaysia</p>
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Attendees</p>

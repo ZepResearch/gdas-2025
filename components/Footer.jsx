@@ -241,7 +241,7 @@ export default function ConferenceFooter() {
                 <li>
                   <div className="space-y-1">
                     <p className="text-blue-200/80 inline-flex gap-2">
-                      <MapPin className="flex-shrink-0" /> Selangor/ Kuala Lumpur, Malaysia
+                      <MapPin className="flex-shrink-0" /> Selangor, Malaysia
                     </p>
                   </div>
                 </li>

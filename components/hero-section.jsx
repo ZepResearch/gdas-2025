@@ -245,7 +245,7 @@ export default function EventLanding() {
                     </div>
                     <div>
                       <p className="text-slate-100 text-sm">Location</p>
-                      <p className="text-white text-lg font-medium">Selangor/ Kuala Lumpur, Malaysia</p>
+                      <p className="text-white text-lg font-medium">Selangor, Malaysia</p>
                     </div>
                   </div>
 

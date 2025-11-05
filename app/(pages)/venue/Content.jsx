@@ -164,116 +164,98 @@ export default function VenuePage() {
       {/* Nearby Attractions Section */}
      {/* Nearby Attractions Section */}
 <section className="relative z-10 py-20 bg-white/50">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-16 ">
-      Nearby Attractions
-    </h2>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Petronas Twin Towers */}
-      <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3570"
-          alt="Petronas Twin Towers"
-          className="h-[300px] object-cover rounded-lg mb-4"
-        />
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Petronas Twin Towers</h3>
-        <p className="text-gray-600 mb-3">
-          Kuala Lumpur’s most iconic landmark featuring a sky bridge and stunning city views.
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-4">
+          Recreational & Leisure Activities in Selangor
+        </h2>
+        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
+          For Early-Arrived Participants: Selangor offers a range of cultural, leisure, and outdoor activities for guests who arrive early. These experiences highlight the state's natural beauty, religious landmarks, and modern attractions providing a relaxing and memorable start before the summit begins.
         </p>
-        <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <MapPin className="w-4 h-4" />
-          
-        </div>
-      </Card>
 
-      {/* KL Tower */}
-      <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1496031304571-f63558898308?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3570"
-          alt="KL Tower"
-          className="h-[300px] object-cover rounded-lg mb-4"
-        />
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">KL Tower (Menara Kuala Lumpur)</h3>
-        <p className="text-gray-600 mb-3">
-          Observation tower offering panoramic views of the city skyline and a revolving restaurant.
-        </p>
-        <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <MapPin className="w-4 h-4" />
-          
-        </div>
-      </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* KRTU Golf */}
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg rounded-lg">
+            <img
+              src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=3570"
+              alt="Golf Course"
+              className="h-[300px] w-full object-cover rounded-lg mb-4"
+            />
+            <div className="flex items-center space-x-2 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900">Golf at KRTU</h3>
+            </div>
+            <p className="text-gray-700 font-medium mb-2">Royal Malaysian Air Force College</p>
+            <p className="text-gray-600 mb-4">
+              Located at the Royal Malaysian Air Force College in Subang, the KRTU golf course provides a serene and prestigious golfing experience. Surrounded by lush greenery and well-maintained fairways, participants can enjoy a peaceful morning or afternoon while networking in a relaxed environment.
+            </p>
+            <div className="space-y-1 text-sm text-gray-600">
+              <p>• Scenic 18-hole course</p>
+              <p>• Calm military-established environment</p>
+              <p>• Ideal for leisurely recreation & networking</p>
+            </div>
+          </Card>
 
-      {/* Batu Caves */}
-      <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1589304122321-2344bad22557?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3174"
-          alt="Batu Caves"
-          className="h-[300px] object-cover rounded-lg mb-4"
-        />
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Batu Caves</h3>
-        <p className="text-gray-600 mb-3">
-          Famous limestone hill with colorful temples and a giant golden Lord Murugan statue.
-        </p>
-        <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <MapPin className="w-4 h-4" />
-          
-        </div>
-      </Card>
+          {/* Blue Mosque */}
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg rounded-lg">
+            <img
+              src="/nearby/SA_Blue_Mosque.jpg"
+              alt="Sultan Salahuddin Abdul Aziz Shah Blue Mosque"
+              className="h-[300px] w-full object-cover rounded-lg mb-4"
+            />
+            <div className="flex items-center space-x-2 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900">Sultan Salahuddin Abdul Aziz Shah Blue Mosque</h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Known as the Blue Mosque, this iconic landmark in Shah Alam is one of the largest mosques in Southeast Asia. Its impressive blue dome and towering minarets are complemented by beautiful Islamic architecture and serene gardens. Visitors may explore the mosque grounds and appreciate the spiritual and cultural ambience.
+            </p>
+            <div className="space-y-1 text-sm text-gray-600">
+              <p>• Spectacular architecture and spiritual atmosphere</p>
+              <p>• Cultural learning opportunity</p>
+              <p>• Photography-friendly surroundings</p>
+            </div>
+          </Card>
 
-      {/* Bukit Bintang */}
-      <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1712601979098-15dccb4d0996?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3570"
-          alt="Bukit Bintang"
-          className="h-[300px] object-cover rounded-lg mb-4"
-        />
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Bukit Bintang</h3>
-        <p className="text-gray-600 mb-3">
-          Kuala Lumpur’s shopping and entertainment district, filled with malls, cafes, and nightlife.
-        </p>
-        <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <MapPin className="w-4 h-4" />
-          
-        </div>
-      </Card>
+          {/* I-City */}
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg rounded-lg">
+            <img
+              src="/nearby/city.jpg"
+              alt="I-City Shah Alam"
+              className="h-[300px] w-full object-cover rounded-lg mb-4"
+            />
+            <div className="flex items-center space-x-2 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900">I-City Shah Alam</h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              I-City is a vibrant modern leisure hub offering technological attractions, theme parks, and night-time light installations. Known as the "City of Digital Lights," it provides entertainment for all ages from museums and rides to vibrant outdoor LED displays.
+            </p>
+            <div className="space-y-1 text-sm text-gray-600">
+              <p>• City of Digital Lights</p>
+              <p>• Snowalk indoor winter park</p>
+              <p>• Family-friendly entertainment & dining options</p>
+            </div>
+          </Card>
 
-      {/* Central Market */}
-      <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1695782332230-27790b9490b4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3570"
-          alt="Central Market Kuala Lumpur"
-          className="h-[300px] object-cover rounded-lg mb-4"
-        />
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Central Market</h3>
-        <p className="text-gray-600 mb-3">
-          Vibrant heritage market showcasing Malaysian crafts, souvenirs, and local delicacies.
-        </p>
-        <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <MapPin className="w-4 h-4" />
-          
+          {/* Flying Fox */}
+          <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg rounded-lg">
+            <img
+              src="/nearby/skytrex.jpeg"
+              alt="Flying Fox Adventure"
+              className="h-[300px] w-full object-cover rounded-lg mb-4"
+            />
+            <div className="flex items-center space-x-2 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900">Flying Fox at Shah Alam Lake Gardens</h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              For adventure enthusiasts, the Shah Alam Lake Gardens offers a Flying Fox (zipline) experience in a scenic nature setting. Participants can enjoy a dose of adrenaline while taking in the peaceful lake views and surrounding parkland.
+            </p>
+            <div className="space-y-1 text-sm text-gray-600">
+              <p>• Safe and exciting outdoor activity</p>
+              <p>• Beautiful lakeside scenery</p>
+              <p>• Suitable for fun team-bonding moments</p>
+            </div>
+          </Card>
         </div>
-      </Card>
-
-      {/* Merdeka Square */}
-      <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-        <img
-          src="https://images.unsplash.com/photo-1663237155810-a292cca8fe47?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3570"
-          alt="Merdeka Square"
-          className="h-[300px] object-cover rounded-lg mb-4"
-        />
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Merdeka Square</h3>
-        <p className="text-gray-600 mb-3">
-          Historical square surrounded by colonial buildings where Malaysia declared independence.
-        </p>
-        <div className="flex items-center space-x-2 text-sm text-gray-500">
-          <MapPin className="w-4 h-4" />
-          
-        </div>
-      </Card>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
       {/* Dining Options Section */}
       {/* <section className="relative z-10 py-20">
