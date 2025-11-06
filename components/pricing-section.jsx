@@ -3,56 +3,136 @@
 import { Check } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function ConferenceTicketPage() {
-const tickets = [
-    {
-      name: "Students",
-      price: "$199",
-      description: "Student discount rate",
-      features: ["Full conference access", "Student networking sessions", "Workshop materials", "Lunch and refreshments", "Certificate of participation","Career guidance sessions"],
-      highlighted: false,
-    },
-    {
-      name: "Academicians",
-      price: "$299",
-      description: "Most popular",
-      features: [
-        "Full conference access",
-        "VIP networking dinner",
-        "Priority seating",
-        "Exclusive roundtable sessions",
-        "Workshop materials",
-        "Certificate of attendance",
-      ],
-      highlighted: true,
-    },
-    {
-      name: "Industrialist",
-      price: "$399",
-      description: "Industry professionals",
-      features: [
-        "Full conference access",
-        "VIP networking dinner",
-        "Priority seating",
-        "Exclusive roundtable sessions",
-        "Workshop materials",
-        "Certificate of attendance",
-        "1-on-1 mentoring session",
-        "Exclusive gala dinner",
-      ],
-      highlighted: false,
-    },
-  ]
+  const [activeTab, setActiveTab] = useState("foreigner") // Default is foreigner
+
+  const ticketsData = {
+    foreigner: [
+      {
+        name: "Students",
+        price: "$199",
+        description: "Student discount rate",
+        features: ["Full conference access", "Student networking sessions", "Workshop materials", "Lunch and refreshments", "Certificate of participation", "Career guidance sessions"],
+        highlighted: false,
+      },
+      {
+        name: "Academicians",
+        price: "$299",
+        description: "Most popular",
+        features: [
+          "Full conference access",
+          "VIP networking dinner",
+          "Priority seating",
+          "Exclusive roundtable sessions",
+          "Workshop materials",
+          "Certificate of attendance",
+        ],
+        highlighted: true,
+      },
+      {
+        name: "Industrialist",
+        price: "$399",
+        description: "Industry professionals",
+        features: [
+          "Full conference access",
+          "VIP networking dinner",
+          "Priority seating",
+          "Exclusive roundtable sessions",
+          "Workshop materials",
+          "Certificate of attendance",
+          "1-on-1 mentoring session",
+          "Exclusive gala dinner",
+        ],
+        highlighted: false,
+      },
+      {
+        name: "Conference + Scopus Proceeding",
+        price: "$600",
+        description: "Complete package",
+        features: [
+          "Full conference access",
+          "Scopus indexed proceeding publication",
+          "VIP networking dinner",
+          "Priority seating",
+          "Exclusive roundtable sessions",
+          "Workshop materials",
+          "Certificate of attendance",
+          "1-on-1 mentoring session",
+          "Exclusive gala dinner",
+        ],
+        highlighted: false,
+      },
+    ],
+    malaysian: [
+      {
+        name: "Students",
+        price: "$149",
+        description: "Student discount rate",
+        features: ["Full conference access", "Student networking sessions", "Workshop materials", "Lunch and refreshments", "Certificate of participation", "Career guidance sessions"],
+        highlighted: false,
+      },
+      {
+        name: "Academicians",
+        price: "$229",
+        description: "Most popular",
+        features: [
+          "Full conference access",
+          "VIP networking dinner",
+          "Priority seating",
+          "Exclusive roundtable sessions",
+          "Workshop materials",
+          "Certificate of attendance",
+        ],
+        highlighted: true,
+      },
+      {
+        name: "Industrialist",
+        price: "$299",
+        description: "Industry professionals",
+        features: [
+          "Full conference access",
+          "VIP networking dinner",
+          "Priority seating",
+          "Exclusive roundtable sessions",
+          "Workshop materials",
+          "Certificate of attendance",
+          "1-on-1 mentoring session",
+          "Exclusive gala dinner",
+        ],
+        highlighted: false,
+      },
+      {
+        name: "Conference + Scopus Proceeding",
+        price: "$500",
+        description: "Complete package",
+        features: [
+          "Full conference access",
+          "Scopus indexed proceeding publication",
+          "VIP networking dinner",
+          "Priority seating",
+          "Exclusive roundtable sessions",
+          "Workshop materials",
+          "Certificate of attendance",
+          "1-on-1 mentoring session",
+          "Exclusive gala dinner",
+        ],
+        highlighted: false,
+      },
+    ],
+  }
+
+  const tickets = ticketsData[activeTab]
 
   return (
-    <section className="min-h-full w-full relative py-20 px-4 bg-cover bg-center bg-no-repeat " style={{ backgroundImage: "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80')" }}>
+    <section className="min-h-full w-full relative py-20 px-4 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80')" }}>
       {/* Blue overlay */}
       <div className="absolute inset-0 bg-blue-900 opacity-50"></div>
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -63,11 +143,42 @@ const tickets = [
           </p>
         </motion.div>
 
+        {/* Tab Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex justify-center mb-12"
+        >
+          <div className="inline-flex bg-white/10 backdrop-blur-sm rounded-lg p-1 gap-2">
+            <button
+              onClick={() => setActiveTab("foreigner")}
+              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === "foreigner"
+                  ? "bg-white text-blue-600 shadow-lg"
+                  : "text-white hover:bg-white/20"
+              }`}
+            >
+              Foreigner
+            </button>
+            <button
+              onClick={() => setActiveTab("malaysian")}
+              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === "malaysian"
+                  ? "bg-white text-blue-600 shadow-lg"
+                  : "text-white hover:bg-white/20"
+              }`}
+            >
+              Malaysian
+            </button>
+          </div>
+        </motion.div>
+
         {/* Ticket Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {tickets.map((ticket, idx) => (
             <motion.div
-              key={idx}
+              key={`${activeTab}-${idx}`}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
@@ -77,7 +188,7 @@ const tickets = [
                   : "border border-slate-200 shadow-lg"
               }`}
             >
-              <div className={`p-8 h-full flex flex-col ${ticket.highlighted ? "bg-blue-600" : "bg-white"}`}>
+              <div className={`p-6 h-full flex flex-col ${ticket.highlighted ? "bg-blue-600" : "bg-white"}`}>
                 {/* Badge for popular */}
                 {ticket.highlighted && (
                   <div className="absolute top-4 right-4 bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-bold">
@@ -87,7 +198,7 @@ const tickets = [
 
                 {/* Ticket name and price */}
                 <div className="mb-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${ticket.highlighted ? "text-white" : "text-slate-900"}`}>
+                  <h3 className={`text-xl font-bold mb-2 ${ticket.highlighted ? "text-white" : "text-slate-900"}`}>
                     {ticket.name}
                   </h3>
                   <p className={`text-sm mb-4 ${ticket.highlighted ? "text-blue-100" : "text-slate-600"}`}>
@@ -95,7 +206,7 @@ const tickets = [
                   </p>
              
                   <div className="flex items-baseline gap-1">
-                    <span className={`text-4xl font-bold ${ticket.highlighted ? "text-white" : "text-slate-900"}`}>
+                    <span className={`text-3xl font-bold ${ticket.highlighted ? "text-white" : "text-slate-900"}`}>
                       {ticket.price}
                     </span>
                     <span className={`text-sm ${ticket.highlighted ? "text-blue-100" : "text-slate-600"}`}>
@@ -106,12 +217,12 @@ const tickets = [
                 </div>
 
                 {/* Features list */}
-                <div className="flex-1 mb-8">
-                  <ul className="space-y-3">
+                <div className="flex-1 mb-6">
+                  <ul className="space-y-2">
                     {ticket.features.map((feature, featureIdx) => (
-                      <li key={featureIdx} className="flex items-start gap-3">
+                      <li key={featureIdx} className="flex items-start gap-2">
                         <Check
-                          size={20}
+                          size={18}
                           className={`flex-shrink-0 mt-0.5 ${ticket.highlighted ? "text-white" : "text-blue-600"}`}
                         />
                         <span className={`text-sm ${ticket.highlighted ? "text-blue-50" : "text-slate-700"}`}>
@@ -123,16 +234,16 @@ const tickets = [
                 </div>
 
                 {/* CTA Button */}
-                     <Link href="/registration" className="underline text-sm mb-4 block">
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    ticket.highlighted
-                      ? "bg-white text-blue-600 hover:bg-blue-50"
-                      : "bg-blue-600 text-white hover:bg-blue-700"
-                  }`}
-                >
-                  Get Ticket
-                </button>
+                <Link href={`/registration/${activeTab}`} className="block">
+                  <button
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      ticket.highlighted
+                        ? "bg-white text-blue-600 hover:bg-blue-50"
+                        : "bg-blue-600 text-white hover:bg-blue-700"
+                    }`}
+                  >
+                    Get Ticket
+                  </button>
                 </Link>
               </div>
             </motion.div>
@@ -148,10 +259,11 @@ const tickets = [
         >
           <div className="bg-slate-50 rounded-xl p-8 max-w-2xl mx-auto">
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-           GDAS 2025
+              GDAS 2025
             </h3>
             <p className="text-slate-600 mb-6">
-Join us at the Global Defence and Aviation Skills Conference 2025 (GDAS 2025) an international platform dedicated to strengthening collaboration between defence institutions, aviation academies, and higher education bodies.            </p>
+              Join us at the Global Defence and Aviation Skills Conference 2025 (GDAS 2025) an international platform dedicated to strengthening collaboration between defence institutions, aviation academies, and higher education bodies.
+            </p>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
                 <p className="font-semibold text-slate-900">Dates</p>

@@ -1,14 +1,15 @@
 "use client"
 
-import React from "react"
-import { motion } from "framer-motion"
-import { Calendar, MapPin, Star, Ticket, Users } from "lucide-react"
+import React, { useState } from "react"
+import { motion ,AnimatePresence } from "framer-motion"
+import { Calendar, ChevronDown, MapPin, Star, Ticket, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { ReserveButton } from "./reserve-button"
 
 export default function EventLanding() {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0)
+  const [isOpen, setIsOpen] = useState(false)
 
   const backgroundImages = [
     "https://images.unsplash.com/photo-1508530786855-dfea35260b8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
@@ -145,8 +146,13 @@ export default function EventLanding() {
         <motion.div className="flex-1  w-full" variants={containerVariants} initial="hidden" animate="visible">
           {/* Event tag */}
          
-
-          {/* Main heading */}
+ <Image
+                src="/assets/dsaklogo.jpg"
+                alt=""
+                className="w-32 drop-shadow-lg "
+       height={300}
+       width={300}
+       /> 
           <motion.h1
             variants={itemVariants}
             className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-medium text-white mb-2 sm:mb-4 text-balance"
@@ -158,17 +164,70 @@ export default function EventLanding() {
         
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col mt-4 sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center w-full sm:w-auto">
-          <Link href="/registration" >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors text-sm sm:text-base"
-            >
-              <Ticket size={20} />
-             Register Now
-            </motion.button>
-            
+        
+           <div className="relative inline-block">
+      {/* Main Button */}
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className="bg-black text-white px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors text-sm sm:text-base"
+      >
+        <Ticket size={20} />
+        Register Now
+        <ChevronDown 
+          size={16} 
+          className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+        />
+      </motion.button>
+
+      {/* Dropdown Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 mt-2 w-full min-w-[250px] bg-white rounded-lg shadow-xl overflow-hidden z-50 border border-gray-100"
+          >
+            <Link href="/registration/foreigner">
+              <motion.div
+                whileHover={{ backgroundColor: "#f3f4f6" }}
+                className="px-6 py-3 text-gray-700 hover:text-black transition-colors cursor-pointer border-b border-gray-100"
+              >
+                <div className="flex items-center gap-2">
+                  <Ticket size={16} />
+                  <span className="font-medium text-sm">Registration for Foreigner</span>
+                </div>
+              </motion.div>
             </Link>
+            
+            <Link href="/registration/malaysian">
+              <motion.div
+                whileHover={{ backgroundColor: "#f3f4f6" }}
+                className="px-6 py-3 text-gray-700 hover:text-black transition-colors cursor-pointer"
+              >
+                <div className="flex items-center gap-2">
+                  <Ticket size={16} />
+                  <span className="font-medium text-sm">Registration for Malaysian</span>
+                </div>
+              </motion.div>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Click outside to close */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </div>
+            
+           
               <ReserveButton/>
             <Link href="/about-conference" >
             <motion.button
@@ -182,18 +241,24 @@ export default function EventLanding() {
             </Link>
           
           </motion.div>
- <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-center gap-3 px-3 max-w-3xl backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-8 ">
-                  <img
-                src="assets/dsak-logo.jpg"
-                alt=""
-                className="h-24 drop-shadow-lg"
-              />
-               <img
-                src="assets/zepresearch.png"
-                alt=""
-                className="h-10 drop-shadow-lg"
-              />
-              <img
+ <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-center gap-3 px-3 max-w-sm backdrop-blur-sm bg-gray-50/50 py-4 rounded-3xl mt-8 ">
+                 
+           <Image
+  src="/assets/zepresearch.png"
+  alt="Zep Research Logo"
+  width={120}
+  height={40}
+  className="drop-shadow-lg"
+/>
+
+<Image
+  src="/assets/krtu.png"
+  alt="KRTU Logo"
+  width={120}
+  height={60}
+  className="drop-shadow-lg"
+/>
+              {/* <img
                 src="/assets/scopus.png"
                 alt=""
                 className="h-10 drop-shadow-lg"
@@ -202,7 +267,7 @@ export default function EventLanding() {
                 src="/assets/clarivate.png"
                 alt=""
                 className="h-10 drop-shadow-lg"
-              />
+              /> */}
               {/* <img
                 src="assets/cpd.png"
                 alt=""

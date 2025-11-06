@@ -11,6 +11,7 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [registrationDropdownOpen, setRegistrationDropdownOpen] = useState(false)
 
   const toggleDropdown = (title) => {
     setOpenDropdown(openDropdown === title ? null : title)
@@ -89,10 +90,36 @@ export default function Navbar() {
 
             {/* Right Side Actions - Made responsive with smaller gaps and icons */}
             <div className="hidden md:flex items-center gap-2 lg:gap-4 flex-shrink-0">
-               <Link href="/registration">
-              <button className="px-3 lg:px-6 py-1.5 lg:py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium text-xs lg:text-sm rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
-Register              </button>
-              </Link>
+              {/* Registration Dropdown */}
+              <div 
+                className="relative group"
+                onMouseEnter={() => setRegistrationDropdownOpen(true)}
+                onMouseLeave={() => setRegistrationDropdownOpen(false)}
+              >
+                <button className="px-3 lg:px-6 py-1.5 lg:py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium text-xs lg:text-sm rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap flex items-center gap-1">
+                  Register
+                  <ChevronDown className="w-3 h-3 lg:w-4 lg:h-4 transition-transform duration-300 group-hover:rotate-180" />
+                </button>
+                
+                {/* Registration Dropdown Menu */}
+                <div className={`absolute right-0 mt-1 w-56 bg-white rounded-lg shadow-lg transition-all duration-300 transform origin-top py-2 z-50 ${
+                  registrationDropdownOpen ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'
+                }`}>
+                  <Link
+                    href="/registration/foreigner"
+                    className="block px-4 py-2 text-xs lg:text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                  >
+                    Registration for Foreigner
+                  </Link>
+                  <Link
+                    href="/registration/malaysian"
+                    className="block px-4 py-2 text-xs lg:text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                  >
+                    Registration for Malaysian
+                  </Link>
+                </div>
+              </div>
+
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 className="p-1.5 lg:p-2 text-gray-700 hover:text-gray-900 transition-colors duration-200 hover:bg-gray-100 rounded-lg flex-shrink-0"
@@ -152,11 +179,38 @@ Register              </button>
                   )}
                 </div>
               ))}
-              <Link href="/registration" className="block mt-2">
-              <button className="w-full mt-4 px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
-             Register
-              </button>
-              </Link>
+              
+              {/* Mobile Registration Dropdown */}
+              <div className="mt-2">
+                <button
+                  onClick={() => toggleDropdown('REGISTRATION')}
+                  className="w-full px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors duration-200 flex items-center justify-between"
+                >
+                  REGISTRATION
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      openDropdown === 'REGISTRATION' ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                
+                {openDropdown === 'REGISTRATION' && (
+                  <div className="pl-4 mt-2 animate-in fade-in slide-in-from-top-1 duration-200">
+                    <Link
+                      href="/registration/foreigner"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-500 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                    >
+                      Registration for Foreigner
+                    </Link>
+                    <Link
+                      href="/registration/malaysian"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-500 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                    >
+                      Registration for Malaysian
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>

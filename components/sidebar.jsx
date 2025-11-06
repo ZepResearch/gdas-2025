@@ -34,7 +34,11 @@ export default function Sidebar({ isOpen, onClose }) {
 
         {/* Logo */}
         <div className="flex items-center gap-2 mb-6 sm:mb-8 mt-2 sm:mt-4">
-         
+          <img
+                src="/assets/dsaklogo.jpg"
+                alt=""
+                className="h-32 drop-shadow-lg "
+              />
         </div>
 
         {/* Content */}

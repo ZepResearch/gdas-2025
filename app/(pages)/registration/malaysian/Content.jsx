@@ -19,7 +19,7 @@ export default function RegistrationPage() {
   const pricingData = [
     {
       category: "Students",
-      price: 199,
+      price: 149,
       currency: "USD",
       features: [
         "Full conference access",
@@ -32,7 +32,7 @@ export default function RegistrationPage() {
     },
     {
       category: "Academicians",
-      price: 299,
+      price: 229,
       currency: "USD",
       features: [
         "Full conference access",
@@ -45,10 +45,25 @@ export default function RegistrationPage() {
     },
     {
       category: "Industrialist",
-      price: 399,
+      price: 299,
       currency: "USD",
       features: [
         "Full conference access",
+        "VIP networking dinner",
+        "Priority seating",
+        "Exclusive roundtable sessions",
+        "Premium workshop materials",
+        "Certificate of participation",
+        "One-on-one consultation slot",
+      ],
+    },
+    {
+      category: "Conference + Scopus Proceeding",
+      price: 500,
+      currency: "USD",
+      features: [
+        "Full conference access",
+        "Scopus indexed proceeding publication",
         "VIP networking dinner",
         "Priority seating",
         "Exclusive roundtable sessions",
@@ -277,7 +292,7 @@ export default function RegistrationPage() {
 
             <TabsContent value="standard" className="mt-0">
           
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-screen-2xl mx-auto">
                 {pricingData.map((categoryData) => renderPricingCard(categoryData))}
               </div>
             </TabsContent>

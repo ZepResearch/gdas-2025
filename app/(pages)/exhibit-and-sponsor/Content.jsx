@@ -232,15 +232,12 @@ export default function ExhibitSponsorPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
                 </Link>
-                <Link href={'/registration'}>
-                <Button
-                  size="lg"
-                  
-                  className="border-white text-white font-semibold px-8"
-                  >
-                  Register
+                 <Link href={'/submission'}>
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8">
+                  Submit Paper
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-            </Link>
+                </Link>
               </div>
 
               

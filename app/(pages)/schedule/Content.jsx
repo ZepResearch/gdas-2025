@@ -10,7 +10,7 @@ const scheduleData = [
   {
     date: "08 Dec 2025 (Mon)",
     items: [
-      { time: "12 pm – 5 pm", title: "Early registration with social activity" },
+      { time: "10 pm – 5 pm", title: "Early registration with social activity" },
       { 
         time: "Available Activities", 
         title: "Recreational & Leisure Activities in Selangor",

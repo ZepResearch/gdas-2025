@@ -387,9 +387,9 @@ export default function About_aboutsection() {
                 Register now and secure your spot among the innovators shaping tomorrow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={'/registration'}>
+                <Link href={'/submission'}>
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8">
-                  Register Now
+                  Submit Paper
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
                 </Link>
