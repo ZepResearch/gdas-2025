@@ -234,7 +234,7 @@ export default function ConferenceFooter() {
                       href="tel:+919237388328"
                       className="inline-flex gap-2 text-blue-200/80 hover:text-blue-100 transition-colors hover:underline"
                     >
-                      <Contact className="flex-shrink-0" />+91 92373 88328
+                      <Contact className="flex-shrink-0" />+60193355021 / +91 92373 88328
                     </a>
                   </div>
                 </li>

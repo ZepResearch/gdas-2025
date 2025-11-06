@@ -125,7 +125,7 @@ export default function ContactUs() {
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-2 text-blue-600" />
-                  <span>+91 92373 88328</span>
+                  <span>+60193355021 / +91 92373 88328</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="mr-2 text-blue-600 h-12 w-12" />
