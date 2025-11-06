@@ -246,7 +246,7 @@ export default function EventLanding() {
            <Image
   src="/assets/zepresearch.png"
   alt="Zep Research Logo"
-  width={120}
+  width={200}
   height={40}
   className="drop-shadow-lg"
 />
