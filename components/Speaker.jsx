@@ -217,10 +217,9 @@ export default function SpeakerSection() {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-            Join us to learn from distinguished experts and thought leaders in gender equality, women's empowerment, and entrepreneurship
-          </p>
-        </div>
-
+Join us to learn from distinguished experts and thought leaders shaping the future of defence, aviation, and aerospace education     
+        </p>
+   </div>
         <div className="flex flex-wrap justify-center gap-3 mb-16">
           {speakerCategories.map((category) => (
             <motion.button
