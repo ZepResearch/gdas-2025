@@ -38,6 +38,8 @@ export default function Navbar() {
   },
   { title: "COMMITTEE", href: "/committee" },
   { title: "SUBMISSION", href: "/submission" },
+  { title: "JOURNAL", href: "/journals" },
+ 
  
   { title: "VENUE", href: "/venue" },
   { title: "AWARDS", href: "/awards" },
