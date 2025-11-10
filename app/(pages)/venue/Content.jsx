@@ -37,16 +37,16 @@ export default function VenuePage() {
         <div className="space-y-4">
           <div className="flex justify-between items-center">
             <span className="text-gray-600">Main Ballroom Capacity</span>
-            <span className="font-semibold text-gray-900">Up to 1,000 delegates</span>
+            <span className="font-semibold text-gray-900">Up to 500 delegates</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-600">Exhibition & Networking Area</span>
-            <span className="font-semibold text-gray-900">4,500 sq. ft.</span>
+            <span className="font-semibold text-gray-900">3,500 sq. ft.</span>
           </div>
-          <div className="flex justify-between items-center">
+          {/* <div className="flex justify-between items-center">
             <span className="text-gray-600">Breakout & VIP Meeting Rooms</span>
-            <span className="font-semibold text-gray-900">10+ rooms</span>
-          </div>
+            <span className="font-semibold text-gray-900">5+ rooms</span>
+          </div> */}
           <div className="flex justify-between items-center">
             <span className="text-gray-600">Conference Facilities</span>
             <span className="font-semibold text-gray-900">State-of-the-art AV systems</span>
@@ -90,7 +90,7 @@ export default function VenuePage() {
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">Venue</h3>
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
-              <MapPin className="w-5 h-5 text-yellow-500 mt-1" />
+              <MapPin className="w-11 h-11 text-yellow-500 mt-1" />
               <div>
                 <p className="font-semibold text-gray-900">Address</p>
                 <p className="text-gray-600">
@@ -132,12 +132,12 @@ export default function VenuePage() {
                 Nearest station: Subang Jaya LRT/KTM — 10 minutes drive to the venue.
               </p>
             </div>
-            <div>
+            {/* <div>
               <p className="font-semibold text-gray-900">By Car</p>
               <p className="text-gray-600">
                 Complimentary on-site parking and valet service available for delegates.
               </p>
-            </div>
+            </div> */}
           </div>
         </Card>
       </div>

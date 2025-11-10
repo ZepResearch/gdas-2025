@@ -17,11 +17,13 @@ import {
   Plane,
   Shield,
   Target,
-  Radio
+  Radio,
+  ChevronDown
 } from "lucide-react"
 
 export default function ConferenceFooter() {
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [isRegistrationDropdownOpen, setIsRegistrationDropdownOpen] = useState(false)
 
   // Navigation links grouped for footer
   const footerLinks = [
@@ -55,7 +57,6 @@ export default function ConferenceFooter() {
       links: [
         { href: "/contact", label: "Contact" },
         { href: "/exhibit-and-sponsor", label: "Exhibit & Sponsor" },
-        { href: "/registration", label: "Registration" },
       ],
     },
   ]
@@ -193,12 +194,6 @@ export default function ConferenceFooter() {
               >
                 <Instagram size={18} />
               </a>
-              {/* <a
-                href="https://x.com/Zepresearch"
-                className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
-              >
-                <Twitter size={18} />
-              </a> */}
               <a
                 href="https://www.linkedin.com/company/zep-research/"
                 className="w-10 h-10 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 flex items-center justify-center hover:bg-blue-500/40 hover:border-blue-300/50 transition-all hover:scale-110"
@@ -250,7 +245,7 @@ export default function ConferenceFooter() {
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {footerLinks.map((group, index) => (
               <div key={index} className="backdrop-blur-sm bg-blue-900/10 p-6 rounded-lg border border-blue-500/20 hover:border-blue-400/40 transition-all">
                 <h4 className="font-bold text-lg mb-4 text-blue-300">{group.title}</h4>
@@ -268,6 +263,38 @@ export default function ConferenceFooter() {
                 </ul>
               </div>
             ))}
+            
+            {/* Registration Dropdown in Footer */}
+            <div className="backdrop-blur-sm bg-blue-900/10 p-6 rounded-lg border border-blue-500/20 hover:border-blue-400/40 transition-all">
+              <h4 className="font-bold text-lg mb-4 text-blue-300">Registration</h4>
+              <div className="relative">
+                <button
+                  onClick={() => setIsRegistrationDropdownOpen(!isRegistrationDropdownOpen)}
+                  className="w-full text-left text-blue-200/70 hover:text-blue-100 transition-colors hover:underline flex items-center justify-between"
+                >
+                  <span>Register Now</span>
+                  <ChevronDown 
+                    className={`w-4 h-4 transition-transform duration-300 ${isRegistrationDropdownOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                
+                {/* Dropdown Menu */}
+                {isRegistrationDropdownOpen && (
+                  <div className="mt-2 bg-slate-800/80 backdrop-blur-sm rounded-lg border border-blue-400/30 overflow-hidden">
+                    <Link href="/registration/foreigner">
+                      <div className="px-4 py-2 text-blue-200/70 hover:text-blue-100 hover:bg-blue-500/20 transition-colors">
+                        Registration for Foreigner
+                      </div>
+                    </Link>
+                    <Link href="/registration/malaysian">
+                      <div className="px-4 py-2 text-blue-200/70 hover:text-blue-100 hover:bg-blue-500/20 transition-colors border-t border-blue-500/20">
+                        Registration for Malaysian
+                      </div>
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
 

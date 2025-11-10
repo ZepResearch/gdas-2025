@@ -151,12 +151,12 @@ If you are passionate about advancing higher education, TVET, and workforce deve
   </Card>
 </div>
 
- <Link href={'/registration'}>
+ {/* <Link href={'/registration'}>
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8">
                 Apply to Join Committee
               </Button>
 
-              </Link>
+              </Link> */}
             </div>
           </Card>
         </div>

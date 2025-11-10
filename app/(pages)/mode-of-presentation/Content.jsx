@@ -315,7 +315,7 @@ export default function ModeOfPresentationPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="/submit-paper">
+                <Link href="/submission">
                 <button className="bg-white text-blue-600 hover:bg-gray-100 rounded-full px-6 py-3 font-medium whitespace-nowrap transition-colors">
                   Submit Your Proposal
                 </button>

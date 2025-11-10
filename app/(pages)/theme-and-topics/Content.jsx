@@ -3,9 +3,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Brain, Bot, Cpu, Zap, Globe, Shield } from "lucide-react"
+import { ArrowRight, Brain, Bot, Cpu, Zap, Globe, Shield, ChevronDown } from "lucide-react"
+import { useState } from "react"
 
 export default function ThemeAndTopicsPage() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+
   const researchAreas = [
     {
       icon: <Cpu className="h-8 w-8 text-blue-600" />,
@@ -160,9 +163,44 @@ export default function ThemeAndTopicsPage() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <Link href={"/registration"}>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8">Register Now</Button>
-            </Link>
+            {/* Register Button with Dropdown */}
+            <div className="relative inline-block">
+              <Button 
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 flex items-center gap-2"
+              >
+                Register Now
+                <ChevronDown 
+                  className={`h-4 w-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                />
+              </Button>
+
+              {/* Dropdown Menu */}
+              {isDropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-xl overflow-hidden z-50 border border-gray-100">
+                  <Link href="/registration/foreigner">
+                    <div className="px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer border-b border-gray-100">
+                      <span className="font-medium text-sm">Registration for Foreigner</span>
+                    </div>
+                  </Link>
+                  
+                  <Link href="/registration/malaysian">
+                    <div className="px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer">
+                      <span className="font-medium text-sm">Registration for Malaysian</span>
+                    </div>
+                  </Link>
+                </div>
+              )}
+
+              {/* Click outside to close */}
+              {isDropdownOpen && (
+                <div 
+                  className="fixed inset-0 z-40" 
+                  onClick={() => setIsDropdownOpen(false)}
+                />
+              )}
+            </div>
+
             <Link href={"/submission"}>
               <Button
                 variant="outline"
