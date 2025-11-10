@@ -9,6 +9,7 @@ import TimelineSection from "@/components/Timeline"
 import SpeakerSection from "@/components/Speaker"
 import { ConferenceFAQ } from "@/components/FAQ"
 import WhyGDAS from "@/components/Why"
+import Buttons from "@/components/DownloadButton"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection />
       <EventSection/>
     <WhyGDAS/>
+    <Buttons/>
       {/* <SponsorsSection/> */}
       <TimelineSection/>
     <SpeakerSection/>

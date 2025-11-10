@@ -99,7 +99,7 @@ export default function WhyGDAS() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl lg:text-5xl font-medium text-blue-900 mb-4">
+          <h2 className="text-3xl md:text-5xl lg:text-5xl font-medium text-gray-900 mb-4">
             Why GDAS 2025
           </h2>
         </motion.div>
@@ -130,7 +130,7 @@ export default function WhyGDAS() {
                   <Icon className="w-7 h-7 text-white" />
                 </motion.div>
 
-                <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                   {reason.title}
                 </h3>
 
