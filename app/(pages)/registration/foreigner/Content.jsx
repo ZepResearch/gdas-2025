@@ -19,7 +19,7 @@ export default function RegistrationPage() {
   const pricingData = [
     {
       category: "Students",
-      price: 199,
+      price: 175,
       currency: "USD",
       features: [
         "Full conference access",
@@ -32,7 +32,7 @@ export default function RegistrationPage() {
     },
     {
       category: "Academicians",
-      price: 299,
+      price: 199,
       currency: "USD",
       features: [
         "Full conference access",
@@ -45,7 +45,7 @@ export default function RegistrationPage() {
     },
     {
       category: "Industrialist",
-      price: 399,
+      price: 199,
       currency: "USD",
       features: [
         "Full conference access",
