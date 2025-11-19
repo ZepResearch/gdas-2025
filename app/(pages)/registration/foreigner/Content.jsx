@@ -28,6 +28,7 @@ export default function RegistrationPage() {
         "Lunch and refreshments",
         "Certificate of participation",
         "Career guidance sessions",
+        "One day Accommodation",  
       ],
     },
     {
@@ -41,6 +42,7 @@ export default function RegistrationPage() {
         "Exclusive roundtable sessions",
         "Workshop materials",
         "Certificate of participation",
+        "One day Accommodation", 
       ],
     },
     {
@@ -55,6 +57,7 @@ export default function RegistrationPage() {
         "Premium workshop materials",
         "Certificate of participation",
         "One-on-one consultation slot",
+        "One day Accommodation", 
       ],
     },
      {
@@ -70,6 +73,7 @@ export default function RegistrationPage() {
         "Premium workshop materials",
         "Certificate of participation",
         "One-on-one consultation slot",
+        "One day Accommodation", 
       ],
     },
   ]
