@@ -19,7 +19,7 @@ export default function RegistrationPage() {
   const pricingData = [
     {
       category: "Students",
-      price: 199,
+      price: 175,
       currency: "USD",
       features: [
         "Full conference access",
@@ -28,11 +28,12 @@ export default function RegistrationPage() {
         "Lunch and refreshments",
         "Certificate of participation",
         "Career guidance sessions",
+        "One day Accommodation",  
       ],
     },
     {
       category: "Academicians",
-      price: 299,
+      price: 199,
       currency: "USD",
       features: [
         "Full conference access",
@@ -41,11 +42,12 @@ export default function RegistrationPage() {
         "Exclusive roundtable sessions",
         "Workshop materials",
         "Certificate of participation",
+        "One day Accommodation", 
       ],
     },
     {
       category: "Industrialist",
-      price: 399,
+      price: 199,
       currency: "USD",
       features: [
         "Full conference access",
@@ -55,6 +57,7 @@ export default function RegistrationPage() {
         "Premium workshop materials",
         "Certificate of participation",
         "One-on-one consultation slot",
+        "One day Accommodation", 
       ],
     },
      {
@@ -70,6 +73,7 @@ export default function RegistrationPage() {
         "Premium workshop materials",
         "Certificate of participation",
         "One-on-one consultation slot",
+        "One day Accommodation", 
       ],
     },
   ]

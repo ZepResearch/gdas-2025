@@ -16,11 +16,14 @@ export default function RegistrationPage() {
   const [customAmount, setCustomAmount] = useState("")
   const [activeTab, setActiveTab] = useState("standard")
 
+  // MYR to USD conversion rate (approximately 4.5 MYR = 1 USD)
+  const MYR_TO_USD = 4.5
+
   const pricingData = [
     {
       category: "Students",
-      price: 149,
-      currency: "USD",
+      priceInMYR: 500,
+      priceInUSD: 500 / MYR_TO_USD, // Will be used for payment
       features: [
         "Full conference access",
         "Student networking sessions",
@@ -32,8 +35,8 @@ export default function RegistrationPage() {
     },
     {
       category: "Academicians",
-      price: 229,
-      currency: "USD",
+      priceInMYR: 750,
+      priceInUSD: 750 / MYR_TO_USD,
       features: [
         "Full conference access",
         "VIP networking dinner",
@@ -45,8 +48,8 @@ export default function RegistrationPage() {
     },
     {
       category: "Industrialist",
-      price: 299,
-      currency: "USD",
+      priceInMYR: 750,
+      priceInUSD: 750 / MYR_TO_USD,
       features: [
         "Full conference access",
         "VIP networking dinner",
@@ -59,8 +62,8 @@ export default function RegistrationPage() {
     },
     {
       category: "Conference + Scopus Proceeding",
-      price: 500,
-      currency: "USD",
+      priceInMYR: 2064,
+      priceInUSD: 2064 / MYR_TO_USD,
       features: [
         "Full conference access",
         "Scopus indexed proceeding publication",
@@ -75,16 +78,19 @@ export default function RegistrationPage() {
   ]
 
   const handleTicketSelect = (ticket) => {
-    // Recalculate tax and total to ensure consistency
-    const taxAmount = Number((ticket.price * 0.06).toFixed(2))
-    const totalAmount = Number((ticket.price + taxAmount).toFixed(2))
+    // Use USD price for calculations
+    const priceInUSD = Number(ticket.priceInUSD.toFixed(2))
+    const taxAmount = Number((priceInUSD * 0.06).toFixed(2))
+    const totalAmount = Number((priceInUSD + taxAmount).toFixed(2))
 
-    // Set selectedTicket with properly calculated values
+    // Set selectedTicket with properly calculated values in USD
     setSelectedTicket({
       ...ticket,
+      price: priceInUSD, // USD price for payment
       taxRate: 0.06,
       taxAmount: taxAmount,
       totalAmount: totalAmount,
+      currency: "USD",
     })
     setIsPaymentFormOpen(true)
   }
@@ -189,8 +195,6 @@ export default function RegistrationPage() {
   }
 
   const renderPricingCard = (categoryData) => {
-    const getCurrencySymbol = (currency) => (currency === "USD" ? "$" : "₹")
-
     return (
       <div
         key={categoryData.category}
@@ -216,8 +220,10 @@ export default function RegistrationPage() {
               <div className="flex flex-col space-y-1">
                 <span className="text-sm text-blue-100 font-medium">Registration Price</span>
                 <span className="text-5xl font-bold text-white">
-                  {getCurrencySymbol(categoryData.currency)}
-                  {categoryData.price}
+                  RM {categoryData.priceInMYR}
+                </span>
+                <span className="text-xs text-blue-100 font-medium mt-1">
+                  (Approx. ${categoryData.priceInUSD.toFixed(2)} USD)
                 </span>
               </div>
             </div>
@@ -242,8 +248,8 @@ export default function RegistrationPage() {
             onClick={() =>
               handleTicketSelect({
                 name: `${categoryData.category} Registration`,
-                price: categoryData.price,
-                currency: categoryData.currency,
+                priceInMYR: categoryData.priceInMYR,
+                priceInUSD: categoryData.priceInUSD,
                 type: categoryData.category,
                 category: categoryData.category,
               })
@@ -251,7 +257,7 @@ export default function RegistrationPage() {
             className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl py-6 font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
           >
             <CreditCard className="mr-2 h-5 w-5 text-white" />
-            Register Now - ${categoryData.price}
+            Register Now - RM {categoryData.priceInMYR}
           </Button>
         </div>
       </div>
@@ -264,10 +270,11 @@ export default function RegistrationPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-medium  mb-4">
+            <h2 className="text-4xl md:text-5xl font-medium mb-4">
               Registration Options
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Choose the perfect plan for your conference experience</p>
+            <p className="text-sm text-blue-600 mt-2 font-medium">Prices displayed in Malaysian Ringgit (MYR)</p>
           </div>
 
           <Tabs defaultValue="standard" className="w-full" onValueChange={setActiveTab}>
@@ -291,7 +298,6 @@ export default function RegistrationPage() {
             </div>
 
             <TabsContent value="standard" className="mt-0">
-          
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-screen-2xl mx-auto">
                 {pricingData.map((categoryData) => renderPricingCard(categoryData))}
               </div>
