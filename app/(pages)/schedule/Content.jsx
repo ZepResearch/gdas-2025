@@ -66,7 +66,7 @@ export default function ConferenceSchedule() {
               Empowering the Future: Advancing Higher Education TVET for World-Class Military and Aviation Experts
             </p>
             <p className="text-gray-700 text-lg max-w-3xl mx-auto mt-4">
-              Join Ministers, Defence Leaders, University Chancellors, and Aviation Industry Executives for two days of strategic dialogue • December 8th - 9th, 2025 • Kuala Lumpur, Malaysia
+              Join Ministers, Defence Leaders, University Chancellors, and Aviation Industry Executives for two days of strategic dialogue • December 8th - 9th, 2025 • Selangor, Malaysia
             </p>
           </div>
 

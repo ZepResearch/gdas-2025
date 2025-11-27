@@ -377,37 +377,33 @@ export default function About_aboutsection() {
 </section>
 
   {/* CTA Section */}
-      <section className="relative z-10 bg-white py-20">
-        <div className=" mx-auto ">
-          <Card className="p-12 bg-gradient-to-br from-blue-500 to-blue-700 text-white text-center border-0 shadow-2xl rounded-none">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Join the Future?</h2>
-              <p className="text-xl mb-8 opacity-90">
-                Don't miss this opportunity to be part of the most influential AI and robotics conference in Asia.
-                Register now and secure your spot among the innovators shaping tomorrow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={'/submission'}>
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8">
-                  Submit Paper
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                </Link>
-                <Link href={'/schedule'}>
-                <Button
-                  size="lg"
-                  
-                  className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8">
-                  View Schedule
-                </Button>
-                </Link>
-              </div>
-             
-            </div>
-          </Card>
+  <section className="relative z-10 bg-white py-20">
+    <div className="mx-auto">
+      <Card className="p-12 bg-gradient-to-br from-blue-600 to-blue-800 text-white text-center border-0 shadow-2xl rounded-none">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Shape Global Defence and Aviation Excellence?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Don't miss this opportunity to connect with defence leaders, aviation innovators, and education experts. 
+            Join GDAS 2025 and be part of building the next generation of military and aerospace professionals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href={'/submission'}>
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold px-8">
+                Submit Paper
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link href={'/register'}>
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold px-8">
+                Register Now
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
         </div>
-      </section>
-      {/* Target Audience Section */}
+      </Card>
+    </div>
+  </section>
 <section className="relative z-10 py-20 bg-white">
   <div className="max-w-screen-2xl mx-auto px-4 text-center">
     <h2 className="text-4xl md:text-5xl font-medium leading-tight text-gray-900 mb-12 ">
