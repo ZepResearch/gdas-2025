@@ -157,13 +157,18 @@ export default function TimelineSection() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-gray-950 transition-colors duration-300">
+                   <h3 className={cn(
+                        "text-xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-gray-950 transition-colors duration-300",
+                        index === 0 && "line-through opacity-60"
+                      )}>
                         {item.title?.toUpperCase()}
                       </h3>
 
                       {/* Date */}
                       <div className="mb-4">
-                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600 font-bold text-lg">
+                        <p className={cn(
+                        "text-xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-gray-950 transition-colors duration-300",
+                        index === 0 && "line-through opacity-60")}>
                           {item.date}
                         </p>
                       </div>
