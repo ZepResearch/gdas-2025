@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsapp";
+import TawkToChat from "@/components/TawkToChat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer/>
         <FloatingWhatsApp/>
+        <TawkToChat/>
       </body>
     </html>
   );
