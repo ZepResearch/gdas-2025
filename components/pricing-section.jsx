@@ -12,14 +12,14 @@ export default function ConferenceTicketPage() {
     foreigner: [
       {
         name: "Students",
-        price: "$199",
+        price: "$175",
         description: "Student discount rate",
         features: ["Full conference access", "Student networking sessions", "Workshop materials", "Lunch and refreshments", "Certificate of participation", "Career guidance sessions"],
         highlighted: false,
       },
       {
         name: "Academicians",
-        price: "$299",
+        price: "$199",
         description: "Most popular",
         features: [
           "Full conference access",
@@ -33,7 +33,7 @@ export default function ConferenceTicketPage() {
       },
       {
         name: "Industrialist",
-        price: "$399",
+        price: "$199",
         description: "Industry professionals",
         features: [
           "Full conference access",
@@ -65,17 +65,17 @@ export default function ConferenceTicketPage() {
         highlighted: false,
       },
     ],
-    malaysian: [
+     malaysian: [
       {
         name: "Students",
-        price: "$149",
+        price: "RM 500",
         description: "Student discount rate",
         features: ["Full conference access", "Student networking sessions", "Workshop materials", "Lunch and refreshments", "Certificate of participation", "Career guidance sessions"],
         highlighted: false,
       },
       {
         name: "Academicians",
-        price: "$229",
+        price: "RM 750",
         description: "Most popular",
         features: [
           "Full conference access",
@@ -89,7 +89,7 @@ export default function ConferenceTicketPage() {
       },
       {
         name: "Industrialist",
-        price: "$299",
+        price: "RM 750",
         description: "Industry professionals",
         features: [
           "Full conference access",
@@ -105,7 +105,7 @@ export default function ConferenceTicketPage() {
       },
       {
         name: "Conference + Scopus Proceeding",
-        price: "$500",
+        price: "RM 2064",
         description: "Complete package",
         features: [
           "Full conference access",
