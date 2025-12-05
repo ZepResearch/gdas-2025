@@ -171,7 +171,7 @@ export default function SpeakerSection() {
         
         // Fetch all speakers from the collection
         const records = await pb.collection("GDAS_speakers").getFullList({
-          sort: "created",
+          sort: "-order",
         })
 
         // Group speakers by category
@@ -217,7 +217,7 @@ export default function SpeakerSection() {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-Join us to learn from distinguished experts and thought leaders shaping the future of defence, aviation, and aerospace education     
+        Join us to learn from distinguished experts and thought leaders shaping the future of defence, aviation, and aerospace education     
         </p>
    </div>
         <div className="flex flex-wrap justify-center gap-3 mb-16">
